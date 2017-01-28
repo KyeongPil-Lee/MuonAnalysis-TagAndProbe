@@ -50,6 +50,8 @@ MuonIDVariables = cms.PSet(
     numberOfMatches   = cms.string("? isMatchesValid ? numberOfMatches : -1"),
     numberOfMatchedStations = cms.string("? isMatchesValid ? numberOfMatchedStations : -1"),
     segmentCompatibility = cms.string("segmentCompatibility"),
+    stationMask = cms.string("stationMask"),
+    numberOfMatchedRPCLayers = cms.string("numberOfMatchedRPCLayers"),
 )
 MuonCaloVariables = cms.PSet(
     hadEnergy   = cms.string("calEnergy.had"),
@@ -169,6 +171,7 @@ MuonIDFlags = cms.PSet(
                         " innerTrack.hitPattern.numberOfValidPixelHits > 0 && " + 
                         " abs(track.ptError / pt) < 0.10 )"),
     MuIDForOutsideInTk = cms.string("isStandAloneMuon && outerTrack.pt > 10 && outerTrack.hitPattern.muonStationsWithValidHits() >= 2"),
+    newMSC = cms.string("numberOfMatchedStations > 1 || ( numberOfMatchedStations == 1 && !(stationMask==1 || stationMask==16) ) || ( numberOfMatchedStations==1 && (stationMask==1 || stationMask==16) && numberOfMatchedRPCLayers > 2 )"),
 )
 
 HighPtTriggerFlags = cms.PSet(
