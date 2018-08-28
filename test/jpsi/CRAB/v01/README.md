@@ -39,3 +39,18 @@
 
 
 
+### CRAB status check
+
+* 101X
+
+  ```
+  cd /afs/cern.ch/user/k/kplee/work/private/MuonPOGTnP/CMSSW/CMSSW_10_1_9_patch1/src/MuonAnalysis/TagAndProbe/test/jpsi/CRAB/v01/CRABDir
+  ```
+
+* 102X
+
+  ```
+  cd /afs/cern.ch/user/k/kplee/work/private/MuonPOGTnP/CMSSW/CMSSW_10_2_1/src/MuonAnalysis/TagAndProbe/test/jpsi/CRAB/v01/CRABDir
+  ```
+
+
