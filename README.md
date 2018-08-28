@@ -13,6 +13,9 @@ To keep all CRAB configuration to be submitted
 ## Recipe
 
 ```
+# -- if lxplus:
+cd /afs/cern.ch/user/k/kplee/work/private/MuonPOGTnP/CMSSW
+
 cmsrel CMSSW_10_1_9_patch1
 cd CMSSW_10_1_9_patch1/src
 cmsenv
