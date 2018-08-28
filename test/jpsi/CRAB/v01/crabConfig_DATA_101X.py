@@ -34,44 +34,44 @@ if __name__ == '__main__':
     from CRABAPI.RawCommand import crabCommand
 
     # -- Run2018A
-    config.General.requestName = 'TnPTreeJPsi'+version+'SingleMuon_Run2018Av1_GoldenJSON'
+    config.General.requestName = 'TnPTreeJPsi'+version+'Charmonium_Run2018Av1_GoldenJSON'
     config.Data.inputDataset = '/Charmonium/Run2018A-PromptReco-v1/AOD'
     config.JobType.psetName = '../../tp_from_aod_simple_Data_CtoF_101X_v9.py'
     crabCommand('submit', config = config)
 
-    config.General.requestName = 'TnPTreeJPsi'+version+'SingleMuon_Run2018Av2_GoldenJSON'
+    config.General.requestName = 'TnPTreeJPsi'+version+'Charmonium_Run2018Av2_GoldenJSON'
     config.Data.inputDataset = '/Charmonium/Run2018A-PromptReco-v2/AOD'
     config.JobType.psetName = '../../tp_from_aod_simple_Data_CtoF_101X_v9.py'
     crabCommand('submit', config = config)
 
-    config.General.requestName = 'TnPTreeJPsi'+version+'SingleMuon_Run2018Av3_GoldenJSON'
+    config.General.requestName = 'TnPTreeJPsi'+version+'Charmonium_Run2018Av3_GoldenJSON'
     config.Data.inputDataset = '/Charmonium/Run2018A-PromptReco-v3/AOD'
     config.JobType.psetName = '../../tp_from_aod_simple_Data_CtoF_101X_v10.py'
     crabCommand('submit', config = config)
 
     # -- Run2018B
-    config.General.requestName = 'TnPTreeJPsi'+version+'SingleMuon_Run2018Bv1_GoldenJSON'
+    config.General.requestName = 'TnPTreeJPsi'+version+'Charmonium_Run2018Bv1_GoldenJSON'
     config.Data.inputDataset = '/Charmonium/Run2018B-PromptReco-v1/AOD'
     config.JobType.psetName = '../../tp_from_aod_simple_Data_CtoF_101X_v10.py'
     crabCommand('submit', config = config)
 
-    config.General.requestName = 'TnPTreeJPsi'+version+'SingleMuon_Run2018Bv2_GoldenJSON'
+    config.General.requestName = 'TnPTreeJPsi'+version+'Charmonium_Run2018Bv2_GoldenJSON'
     config.Data.inputDataset = '/Charmonium/Run2018B-PromptReco-v2/AOD'
     config.JobType.psetName = '../../tp_from_aod_simple_Data_CtoF_101X_v11.py'
     crabCommand('submit', config = config)
 
     # -- Run2018C
-    config.General.requestName = 'TnPTreeJPsi'+version+'SingleMuon_Run2018Cv1_GoldenJSON'
+    config.General.requestName = 'TnPTreeJPsi'+version+'Charmonium_Run2018Cv1_GoldenJSON'
     config.Data.inputDataset = '/Charmonium/Run2018C-PromptReco-v1/AOD'
     config.JobType.psetName = '../../tp_from_aod_simple_Data_CtoF_101X_v11.py'
     crabCommand('submit', config = config)
 
-    config.General.requestName = 'TnPTreeJPsi'+version+'SingleMuon_Run2018Cv2_GoldenJSON'
+    config.General.requestName = 'TnPTreeJPsi'+version+'Charmonium_Run2018Cv2_GoldenJSON'
     config.Data.inputDataset = '/Charmonium/Run2018C-PromptReco-v2/AOD'
     config.JobType.psetName = '../../tp_from_aod_simple_Data_CtoF_101X_v11.py'
     crabCommand('submit', config = config)
 
-    config.General.requestName = 'TnPTreeJPsi'+version+'SingleMuon_Run2018Cv3_GoldenJSON'
+    config.General.requestName = 'TnPTreeJPsi'+version+'Charmonium_Run2018Cv3_GoldenJSON'
     config.Data.inputDataset = '/Charmonium/Run2018C-PromptReco-v3/AOD'
     config.JobType.psetName = '../../tp_from_aod_simple_Data_CtoF_101X_v11.py'
     crabCommand('submit', config = config)
