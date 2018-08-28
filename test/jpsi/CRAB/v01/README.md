@@ -5,7 +5,7 @@
 ```
 /Charmonium/Run2018A-PromptReco-v1/AOD
 /Charmonium/Run2018A-PromptReco-v2/AOD 
-/Charmonium/Run2018A-PromptReco-v3/AOD
+/Charmonium/Run2018A-PromptReco-v3AOD
 /Charmonium/Run2018B-PromptReco-v1/AOD
 /Charmonium/Run2018B-PromptReco-v2/AOD
 /Charmonium/Run2018C-PromptReco-v1/AOD
