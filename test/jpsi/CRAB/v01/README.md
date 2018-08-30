@@ -45,12 +45,29 @@
 
   ```
   cd /afs/cern.ch/user/k/kplee/work/private/MuonPOGTnP/CMSSW/CMSSW_10_1_9_patch1/src/MuonAnalysis/TagAndProbe/test/jpsi/CRAB/v01/CRABDir
+  
+  # crab status crab_TnPTreeJPsi_v20180828_Charmonium_Run2018Av1_GoldenJSON;
+  # crab status crab_TnPTreeJPsi_v20180828_Charmonium_Run2018Av2_GoldenJSON;
+  # crab status crab_TnPTreeJPsi_v20180828_Charmonium_Run2018Av3_GoldenJSON;
+  # crab status crab_TnPTreeJPsi_v20180828_Charmonium_Run2018Bv1_GoldenJSON;
+  # crab status crab_TnPTreeJPsi_v20180828_Charmonium_Run2018Bv2_GoldenJSON;
+  # crab status crab_TnPTreeJPsi_v20180828_Charmonium_Run2018Cv1_GoldenJSON;
+  # crab status crab_TnPTreeJPsi_v20180828_Charmonium_Run2018Cv2_GoldenJSON;
+  # crab status crab_TnPTreeJPsi_v20180828_Charmonium_Run2018Cv3_GoldenJSON;
   ```
 
 * 102X
 
   ```
   cd /afs/cern.ch/user/k/kplee/work/private/MuonPOGTnP/CMSSW/CMSSW_10_2_1/src/MuonAnalysis/TagAndProbe/test/jpsi/CRAB/v01/CRABDir
+  # crab status crab_TnPTreeJPsi_v20180828_Charmonium_Run2018Dv2_GoldenJSON_Upto321221
   ```
+
+* All of them are finished (within 1 days)
+
+
+
+### Transferring
+
 
 
