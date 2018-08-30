@@ -15,3 +15,18 @@ Updates from 80X-v6
 
 
 
+## Recipe
+
+```
+cmsrel CMSSW_8_0_25
+cd CMSSW_8_0_25/src/
+cmsenv
+
+git clone git@github.com:KyeongPil-Lee/MuonAnalysis-TagAndProbe.git  MuonAnalysis/TagAndProbe -b  80X-v6.1
+
+scram b -j 4 >&scram.log&
+tail -f scram.log
+```
+
+
+
