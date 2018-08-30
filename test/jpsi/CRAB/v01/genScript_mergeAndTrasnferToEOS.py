@@ -50,8 +50,8 @@ tool.treeName = "TnPTreeJPsi_v20180828_Charmonium_Run2018Cv3_GoldenJSON.root"
 tool.eosPath = "/eos/cms/store/group/phys_muon/TagAndProbe/Run2018/94_pre3"
 tool.Register()
 
-tool.crabDir = "crab_TnPTreeJPsi_v20180828_Charmonium_Run2018Dv2_GoldenJSON"
-tool.treeName = "TnPTreeJPsi_v20180828_Charmonium_Run2018Dv2_GoldenJSON.root"
+tool.crabDir = "crab_TnPTreeJPsi_v20180828_Charmonium_Run2018Dv2_GoldenJSON_Upto321221"
+tool.treeName = "TnPTreeJPsi_v20180828_Charmonium_Run2018Dv2_GoldenJSON_Upto321221.root"
 tool.eosPath = "/eos/cms/store/group/phys_muon/TagAndProbe/Run2018/94_pre3"
 tool.Register()
 
