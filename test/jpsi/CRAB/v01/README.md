@@ -69,5 +69,16 @@
 
 ### Transferring
 
+```
+python genScript_mergeAndTrasnferToEOS.py
+source script_mergeAndTrasnferToEOS.sh >&script_mergeAndTrasnferToEOS.log&
+```
+
+
+
+### Fix typo
+
+Remove "v20180828" in the tree name
+
 
 
