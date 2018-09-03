@@ -8,9 +8,10 @@ git clone https://github.com/cms-analysis/MuonAnalysis-TagAndProbe.git  MuonAnal
 
 Updates from 80X-v6
 
-* New code: test/jpsi/tp_from_aod_simple_Data_v2.py
-  * Changes from tp_from_aod_simple_Data.py
+* New code: ```test/jpsi/tp_from_aod_simple_Data/MC_v2.py```, 
+  * Changes from ```tp_from_aod_simple_Data/MC.py```
     * Include ```TrackQualityFlags``` and ```MuonIDFlags```  in ```tagFlags```
+    * Update global tags & input files accordingly (for legacy rereco datasets)
     * Details: https://its.cern.ch/jira/browse/CMSMUONS-148
 
 
