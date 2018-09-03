@@ -25,7 +25,7 @@ config.Data.lumiMask = '/afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Coll
 # config.Data.runRange = '%d-%d' % (FirstRun, LastRun)
 
 
-version = '_v20180830_LegacyRerecoWithIDFlag_'
+version = '_v20180903_LegacyRerecoWithIDFlag_'
 # 'MultiCRAB' part
 if __name__ == '__main__':
     
