@@ -34,7 +34,6 @@ if __name__ == '__main__':
     
     from CRABAPI.RawCommand import crabCommand
 
-    # # -- Run2018A
     config.General.requestName = 'TnPTreeZ'+version+'SingleMuon_Run2018Dv2_GoldenJSON_Upto321461'
     config.Data.inputDataset = '/SingleMuon/Run2018D-PromptReco-v2/AOD'
     config.JobType.psetName = '../../tp_from_aod_Data_102X_v4.py'
