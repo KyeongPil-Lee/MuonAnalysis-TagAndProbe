@@ -10,49 +10,39 @@ tool.xrdProtocol = "root://eoscms.cern.ch"
 # -- J/Psi trees
 tool.SEPath = "/pnfs/knu.ac.kr/data/cms/store/user/kplee/Charmonium"
 
-# tool.crabDir = "crab_TnPTreeJPsi_v20180828_Charmonium_Run2018Av1_GoldenJSON"
-# tool.treeName = "TnPTreeJPsi_v20180828_Charmonium_Run2018Av1_GoldenJSON.root"
-# tool.eosPath = "/eos/cms/store/group/phys_muon/TagAndProbe/Run2018/94_pre3"
-# tool.Register()
+tool.crabDir = "crab_TagProbe_v20180903_LegacyRerecoWithIDFlag_Charmonium_Run2016Bver2_GoldenJSON"
+tool.treeName = "TnPTreeJPsi_LegacyRereco07Aug17_Charmonium_Run2016Bver2_GoldenJSON.root"
+tool.eosPath = "/eos/cms/store/group/phys_muon/TagAndProbe/Run2016/80X_v6/IDFlag"
+tool.Register()
 
-# tool.crabDir = "crab_TnPTreeJPsi_v20180828_Charmonium_Run2018Av2_GoldenJSON"
-# tool.treeName = "TnPTreeJPsi_v20180828_Charmonium_Run2018Av2_GoldenJSON.root"
-# tool.eosPath = "/eos/cms/store/group/phys_muon/TagAndProbe/Run2018/94_pre3"
-# tool.Register()
+tool.crabDir = "crab_TagProbe_v20180903_LegacyRerecoWithIDFlag_Charmonium_Run2016C_GoldenJSON"
+tool.treeName = "TnPTreeJPsi_LegacyRereco07Aug17_Charmonium_Run2016C_GoldenJSON.root"
+tool.eosPath = "/eos/cms/store/group/phys_muon/TagAndProbe/Run2016/80X_v6/IDFlag"
+tool.Register()
 
-# tool.crabDir = "crab_TnPTreeJPsi_v20180828_Charmonium_Run2018Av3_GoldenJSON"
-# tool.treeName = "TnPTreeJPsi_v20180828_Charmonium_Run2018Av3_GoldenJSON.root"
-# tool.eosPath = "/eos/cms/store/group/phys_muon/TagAndProbe/Run2018/94_pre3"
-# tool.Register()
+tool.crabDir = "crab_TagProbe_v20180903_LegacyRerecoWithIDFlag_Charmonium_Run2016D_GoldenJSON"
+tool.treeName = "TnPTreeJPsi_LegacyRereco07Aug17_Charmonium_Run2016D_GoldenJSON.root"
+tool.eosPath = "/eos/cms/store/group/phys_muon/TagAndProbe/Run2016/80X_v6/IDFlag"
+tool.Register()
 
-# tool.crabDir = "crab_TnPTreeJPsi_v20180828_Charmonium_Run2018Bv1_GoldenJSON"
-# tool.treeName = "TnPTreeJPsi_v20180828_Charmonium_Run2018Bv1_GoldenJSON.root"
-# tool.eosPath = "/eos/cms/store/group/phys_muon/TagAndProbe/Run2018/94_pre3"
-# tool.Register()
+tool.crabDir = "crab_TagProbe_v20180903_LegacyRerecoWithIDFlag_Charmonium_Run2016E_GoldenJSON"
+tool.treeName = "TnPTreeJPsi_LegacyRereco07Aug17_Charmonium_Run2016E_GoldenJSON.root"
+tool.eosPath = "/eos/cms/store/group/phys_muon/TagAndProbe/Run2016/80X_v6/IDFlag"
+tool.Register()
 
-# tool.crabDir = "crab_TnPTreeJPsi_v20180828_Charmonium_Run2018Bv2_GoldenJSON"
-# tool.treeName = "TnPTreeJPsi_v20180828_Charmonium_Run2018Bv2_GoldenJSON.root"
-# tool.eosPath = "/eos/cms/store/group/phys_muon/TagAndProbe/Run2018/94_pre3"
-# tool.Register()
+tool.crabDir = "crab_TagProbe_v20180903_LegacyRerecoWithIDFlag_Charmonium_Run2016F_GoldenJSON"
+tool.treeName = "TnPTreeJPsi_LegacyRereco07Aug17_Charmonium_Run2016F_GoldenJSON.root"
+tool.eosPath = "/eos/cms/store/group/phys_muon/TagAndProbe/Run2016/80X_v6/IDFlag"
+tool.Register()
 
-# tool.crabDir = "crab_TnPTreeJPsi_v20180828_Charmonium_Run2018Cv1_GoldenJSON"
-# tool.treeName = "TnPTreeJPsi_v20180828_Charmonium_Run2018Cv1_GoldenJSON.root"
-# tool.eosPath = "/eos/cms/store/group/phys_muon/TagAndProbe/Run2018/94_pre3"
-# tool.Register()
+tool.crabDir = "crab_TagProbe_v20180903_LegacyRerecoWithIDFlag_Charmonium_Run2016G_GoldenJSON"
+tool.treeName = "TnPTreeJPsi_LegacyRereco07Aug17_Charmonium_Run2016G_GoldenJSON.root"
+tool.eosPath = "/eos/cms/store/group/phys_muon/TagAndProbe/Run2016/80X_v6/IDFlag"
+tool.Register()
 
-# tool.crabDir = "crab_TnPTreeJPsi_v20180828_Charmonium_Run2018Cv2_GoldenJSON"
-# tool.treeName = "TnPTreeJPsi_v20180828_Charmonium_Run2018Cv2_GoldenJSON.root"
-# tool.eosPath = "/eos/cms/store/group/phys_muon/TagAndProbe/Run2018/94_pre3"
-# tool.Register()
-
-# tool.crabDir = "crab_TnPTreeJPsi_v20180828_Charmonium_Run2018Cv3_GoldenJSON"
-# tool.treeName = "TnPTreeJPsi_v20180828_Charmonium_Run2018Cv3_GoldenJSON.root"
-# tool.eosPath = "/eos/cms/store/group/phys_muon/TagAndProbe/Run2018/94_pre3"
-# tool.Register()
-
-# tool.crabDir = "crab_TnPTreeJPsi_v20180828_Charmonium_Run2018Dv2_GoldenJSON_Upto321221"
-# tool.treeName = "TnPTreeJPsi_v20180828_Charmonium_Run2018Dv2_GoldenJSON_Upto321221.root"
-# tool.eosPath = "/eos/cms/store/group/phys_muon/TagAndProbe/Run2018/94_pre3"
-# tool.Register()
+tool.crabDir = "crab_TagProbe_v20180903_LegacyRerecoWithIDFlag_Charmonium_Run2016H_GoldenJSON"
+tool.treeName = "TnPTreeJPsi_LegacyRereco07Aug17_Charmonium_Run2016H_GoldenJSON.root"
+tool.eosPath = "/eos/cms/store/group/phys_muon/TagAndProbe/Run2016/80X_v6/IDFlag"
+tool.Register()
 
 tool.GenScript()
