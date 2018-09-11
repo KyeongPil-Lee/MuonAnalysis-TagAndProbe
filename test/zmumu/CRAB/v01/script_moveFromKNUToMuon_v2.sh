@@ -1,0 +1,27 @@
+#!bin/bash
+
+crab_TnPTreeZ_v20180909_SingleMuon_Run2018Dv2_DCSOnly_322069_to_322324
+crab_TnPTreeZ_v20180910_SingleMuon_Run2018Dv2_DCSOnly_322325_to_322356
+crab_TnPTreeZ_v20180910_SingleMuon_Run2018Dv2_DCSOnly_322381_to_322430
+
+
+hadd TnPTreeZ_SingleMuon_Run2018Dv2_DCSOnly_322069_to_322324.root \
+/pnfs/knu.ac.kr/data/cms/store/user/kplee/SingleMuon/crab_TnPTreeZ_v20180909_SingleMuon_Run2018Dv2_DCSOnly_322069_to_322324/180909_103430/0000/*.root
+
+hadd TnPTreeZ_SingleMuon_Run2018Dv2_DCSOnly_322325_to_322356.root \
+/pnfs/knu.ac.kr/data/cms/store/user/kplee/SingleMuon/crab_TnPTreeZ_v20180910_SingleMuon_Run2018Dv2_DCSOnly_322325_to_322356/180910_110149/0000/*.root
+
+hadd TnPTreeZ_SingleMuon_Run2018Dv2_DCSOnly_322381_to_322430.root \
+/pnfs/knu.ac.kr/data/cms/store/user/kplee/SingleMuon/crab_TnPTreeZ_v20180910_SingleMuon_Run2018Dv2_DCSOnly_322325_to_322356/180910_110149/0000/*.root
+
+hadd TnPTreeZ_SingleMuon_Run2018Dv2_DCSOnly_322069_to_322430.root \
+TnPTreeZ_SingleMuon_Run2018Dv2_DCSOnly_322069_to_322324.root \
+TnPTreeZ_SingleMuon_Run2018Dv2_DCSOnly_322325_to_322356.root \
+TnPTreeZ_SingleMuon_Run2018Dv2_DCSOnly_322381_to_322430.root
+
+echo "hadd: finished"
+
+scp -P 50001 TnPTreeZ_SingleMuon_Run2018Dv2_DCSOnly_322069_to_322430.root kplee@147.47.50.161:/scratch/kplee/TagProbe/101X
+
+echo "scp: finished"
+
