@@ -22,11 +22,11 @@ tool.Register()
 
 
 # -- DY MC sample
-tool.SEPath = "/pnfs/knu.ac.kr/data/cms/store/user/kplee/DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8"
-tool.crabDir = "crab_TnPTreeZ_v20181012_102X_DYJetsToLL_M50_MadgraphMLM"
-tool.treeName = "TnPTreeZ_102X_DYJetsToLL_M50_MadgraphMLM.root"
-tool.eosPath = "/eos/cms/store/group/phys_muon/TagAndProbe/Run2018/94_pre3"
-tool.Register()
+# tool.SEPath = "/pnfs/knu.ac.kr/data/cms/store/user/kplee/DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8"
+# tool.crabDir = "crab_TnPTreeZ_v20181013_102X_DYJetsToLL_M50_MadgraphMLM"
+# tool.treeName = "TnPTreeZ_102X_DYJetsToLL_M50_MadgraphMLM.root"
+# tool.eosPath = "/eos/cms/store/group/phys_muon/TagAndProbe/Run2018/94_pre3"
+# tool.Register()
 
 
 # -- Charmonium sample
