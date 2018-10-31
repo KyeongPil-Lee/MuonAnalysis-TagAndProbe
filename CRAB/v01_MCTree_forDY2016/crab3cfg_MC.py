@@ -10,9 +10,9 @@ config.JobType.psetName = '../../test/zmumu/tp_from_aod_MC.py'
 config.Data.inputDataset = ''
 
 config.Data.inputDBS = 'global'
-config.Data.splitting = 'Automatic'
-# config.Data.splitting = 'LumiBased'
-# config.Data.unitsPerJob = 20
+# config.Data.splitting = 'Automatic'
+config.Data.splitting = 'FileBased'
+config.Data.unitsPerJob = 3
 config.Data.outLFNDirBase = '/store/user/%s/' % (getUsernameFromSiteDB())
 config.Data.publication = False
 
@@ -25,7 +25,7 @@ config.Site.storageSite = 'T2_KR_KNU'
 # config.Data.runRange = '%d-%d' % (FirstRun, LastRun)
 
 
-version = '_v20181026_'
+version = '_v20181028_'
 # 'MultiCRAB' part
 if __name__ == '__main__':
     
@@ -36,7 +36,8 @@ if __name__ == '__main__':
     # crabCommand('submit', config = config)
 
     config.General.requestName = 'TnPTreeZ'+version+'DYLL_M50_aMCNLO'
-    config.Data.inputDataset = '/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6_ext2-v1/MINIAODSIM'
+    # config.Data.inputDataset = '/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6_ext2-v1/MINIAODSIM'
+    config.Data.inputDataset = '/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/RunIISummer16DR80Premix-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6_ext2-v1/AODSIM'
     crabCommand('submit', config = config)
 
     # config.General.requestName = ''
