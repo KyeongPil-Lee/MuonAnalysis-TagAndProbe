@@ -22,7 +22,8 @@ config.Data.lumiMask = '/afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Coll
 # config.Site.storageSite = 'T3_KR_KISTI'
 config.Site.storageSite = 'T2_KR_KNU'
 
-version = '_v20181105_'
+# version = '_v20181105_'
+version = '_v20181106_'
 # 'MultiCRAB' part
 if __name__ == '__main__':
     
@@ -33,12 +34,12 @@ if __name__ == '__main__':
     config.JobType.psetName = '../../test/zmumu/tp_from_aod_Data_102X_Sep2018Rereco_v1.py'
     crabCommand('submit', config = config)
 
-    config.General.requestName = 'TnPTreeZ'+version+'17Sep2018_SingleMuon_Run2018Bv1_GoldenJSON'
-    config.Data.inputDataset = '/SingleMuon/Run2018B-17Sep2018-v1/AOD'
-    config.JobType.psetName = '../../test/zmumu/tp_from_aod_Data_102X_Sep2018Rereco_v1.py'
-    crabCommand('submit', config = config)
+    # config.General.requestName = 'TnPTreeZ'+version+'17Sep2018_SingleMuon_Run2018Bv1_GoldenJSON'
+    # config.Data.inputDataset = '/SingleMuon/Run2018B-17Sep2018-v1/AOD'
+    # config.JobType.psetName = '../../test/zmumu/tp_from_aod_Data_102X_Sep2018Rereco_v1.py'
+    # crabCommand('submit', config = config)
 
-    config.General.requestName = 'TnPTreeZ'+version+'17Sep2018_SingleMuon_Run2018Cv1_GoldenJSON'
-    config.Data.inputDataset = '/SingleMuon/Run2018C-17Sep2018-v1/AOD'
-    config.JobType.psetName = '../../test/zmumu/tp_from_aod_Data_102X_Sep2018Rereco_v1.py'
-    crabCommand('submit', config = config)
+    # config.General.requestName = 'TnPTreeZ'+version+'17Sep2018_SingleMuon_Run2018Cv1_GoldenJSON'
+    # config.Data.inputDataset = '/SingleMuon/Run2018C-17Sep2018-v1/AOD'
+    # config.JobType.psetName = '../../test/zmumu/tp_from_aod_Data_102X_Sep2018Rereco_v1.py'
+    # crabCommand('submit', config = config)
