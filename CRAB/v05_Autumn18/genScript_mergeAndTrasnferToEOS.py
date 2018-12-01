@@ -7,8 +7,8 @@ tool.xrdProtocol = "root://eoscms.cern.ch"
 
 # -- individual settings
 
-# # -- SingleMuon trees
-tool.SEPath = "/pnfs/knu.ac.kr/data/cms/store/user/kplee/SingleMuon"
+# # -- DY MC trees
+tool.SEPath = "/pnfs/knu.ac.kr/data/cms/store/user/kplee/DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8"
 
 tool.crabDir = "crab_TnPTreeZ_v20181130_102XAutumn18_DYJetsToLL_M50_MadgraphMLM"
 tool.treeName = "TnPTreeZ_102XAutumn18_DYJetsToLL_M50_MadgraphMLM_Incomplete.root"
