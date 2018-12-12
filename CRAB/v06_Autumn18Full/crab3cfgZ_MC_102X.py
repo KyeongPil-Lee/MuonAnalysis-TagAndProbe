@@ -33,7 +33,7 @@ if __name__ == '__main__':
 
     config.General.requestName = 'TnPTreeZ'+version+'102XAutumn18_DYJetsToLL_M50_MadgraphMLM'
     config.Data.inputDataset = '/DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIAutumn18DRPremix-102X_upgrade2018_realistic_v15-v1/AODSIM'
-    config.Data.allowNonValidInputDataset = True # -- current status = Production
+    # config.Data.allowNonValidInputDataset = True # -- current status = Production
     crabCommand('submit', config = config)
 
     # config.General.requestName = ''

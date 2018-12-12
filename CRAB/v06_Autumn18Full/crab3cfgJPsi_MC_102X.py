@@ -31,7 +31,7 @@ if __name__ == '__main__':
     
     from CRABAPI.RawCommand import crabCommand
 
-    config.General.requestName = 'TnPTreeJPsi'+version+'102X_JpsiToMuMu_JpsiPt8_Pythia8'
+    config.General.requestName = 'TnPTreeJPsi'+version+'102XAutumn18_JpsiToMuMu_JpsiPt8_Pythia8'
     config.Data.inputDataset = '/JpsiToMuMu_JpsiPt8_TuneCP5_13TeV-pythia8/RunIIAutumn18DRPremix-102X_upgrade2018_realistic_v15-v1/AODSIM'
     crabCommand('submit', config = config)
 
