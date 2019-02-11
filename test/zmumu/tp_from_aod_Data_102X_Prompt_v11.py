@@ -637,6 +637,7 @@ process.fakeRateJetPlusProbe = cms.Path(
     process.tagMuons + process.probeMuons + 
     process.jetPlusProbeSequence +
     process.extraProbeVariablesSeq + 
+    process.muonHighPt + 
     process.fakeRateJetPlusProbeTree
 )
 process.fakeRateWPlusProbe = cms.Path(
@@ -645,6 +646,7 @@ process.fakeRateWPlusProbe = cms.Path(
     process.tagMuons + process.probeMuons + 
     process.wPlusProbeSequence +
     process.extraProbeVariablesSeq + 
+    process.muonHighPt + 
     process.fakeRateWPlusProbeTree
 )
 process.fakeRateZPlusProbe = cms.Path(
@@ -653,6 +655,7 @@ process.fakeRateZPlusProbe = cms.Path(
     process.tagMuons + process.probeMuons + 
     process.zPlusProbeSequence +
     process.extraProbeVariablesSeq + 
+    process.muonHighPt + 
     process.fakeRateZPlusProbeTree
 )
 
