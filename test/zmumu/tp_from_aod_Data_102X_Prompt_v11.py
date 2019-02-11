@@ -100,7 +100,15 @@ elif "CMSSW_9_4_" in os.environ['CMSSW_VERSION']:
     ]
 elif "CMSSW_10_2_" in os.environ['CMSSW_VERSION']:
     process.GlobalTag.globaltag = cms.string('102X_dataRun2_Prompt_v11')
-    process.source.fileNames = []
+    process.source.fileNames = [
+    '/store/data/Run2018D/SingleMuon/AOD/PromptReco-v2/000/325/170/00000/CDC87D02-6EAD-6441-9686-24FA9D62F80F.root',
+    # '/store/data/Run2018D/SingleMuon/AOD/PromptReco-v2/000/325/170/00000/E6EF00C0-DAF8-5340-A280-4A740997BA28.root',
+    # '/store/data/Run2018D/SingleMuon/AOD/PromptReco-v2/000/325/170/00000/5A02F32D-750B-0142-821E-4953E5F095AB.root',
+    # '/store/data/Run2018D/SingleMuon/AOD/PromptReco-v2/000/325/170/00000/980CD808-8F5B-A344-822D-0F19C6EE4F84.root',
+    # '/store/data/Run2018D/SingleMuon/AOD/PromptReco-v2/000/325/170/00000/81BEEAF1-0D75-8644-B66F-E95AD3D1C28B.root',
+    # '/store/data/Run2018D/SingleMuon/AOD/PromptReco-v2/000/325/170/00000/4CA47998-5C52-F744-8244-9E6EA9ABCE5B.root',
+    # '/store/data/Run2018D/SingleMuon/AOD/PromptReco-v2/000/325/170/00000/6D6950A9-69BE-514F-9A37-0F4B80DA5CA4.root',
+    ]
 
 else: raise RuntimeError, "Unknown CMSSW version %s" % os.environ['CMSSW_VERSION']
 
