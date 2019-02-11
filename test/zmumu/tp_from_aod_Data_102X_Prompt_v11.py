@@ -342,6 +342,7 @@ process.extraProbeVariablesSeq = cms.Sequence(
     process.computeCorrectedIso + 
     process.splitTrackTagger +
     process.muonDxyPVdzmin + 
+    process.muonHighPt + 
     process.probeMetMt + process.tagMetMt +
     process.miniIsoSeq +
     # process.ak4PFCHSJetsL1L2L3 +
@@ -365,7 +366,6 @@ process.tnpSimpleSequence = cms.Sequence(
     process.bestPairByZMass + 
     process.newTunePVals +
     process.muonDxyPVdzminTags +
-    process.muonHighPt + 
     process.muonHighPtTags + 
     process.tpTree
 )
@@ -637,7 +637,6 @@ process.fakeRateJetPlusProbe = cms.Path(
     process.tagMuons + process.probeMuons + 
     process.jetPlusProbeSequence +
     process.extraProbeVariablesSeq + 
-    process.muonHighPt + 
     process.fakeRateJetPlusProbeTree
 )
 process.fakeRateWPlusProbe = cms.Path(
@@ -646,7 +645,6 @@ process.fakeRateWPlusProbe = cms.Path(
     process.tagMuons + process.probeMuons + 
     process.wPlusProbeSequence +
     process.extraProbeVariablesSeq + 
-    process.muonHighPt + 
     process.fakeRateWPlusProbeTree
 )
 process.fakeRateZPlusProbe = cms.Path(
@@ -655,7 +653,6 @@ process.fakeRateZPlusProbe = cms.Path(
     process.tagMuons + process.probeMuons + 
     process.zPlusProbeSequence +
     process.extraProbeVariablesSeq + 
-    process.muonHighPt + 
     process.fakeRateZPlusProbeTree
 )
 
