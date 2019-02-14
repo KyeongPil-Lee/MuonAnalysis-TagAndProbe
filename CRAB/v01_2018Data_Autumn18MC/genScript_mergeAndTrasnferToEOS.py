@@ -3,7 +3,8 @@ from MuonAnalysis.TagAndProbe.TransferToEOSTool import *
 tool = TransferToEOSTool()
 # -- common settings
 # tool.scriptName = "script_mergeAndTrasnferToEOS.sh"
-tool.scriptName = "script_mergeAndTrasnferToEOS_JPsi.sh"
+# tool.scriptName = "script_mergeAndTrasnferToEOS_JPsi.sh"
+tool.scriptName = "script_mergeAndTrasnferToEOS_Z.sh"
 tool.xrdProtocol = "root://eoscms.cern.ch"
 
 # -- individual settings
