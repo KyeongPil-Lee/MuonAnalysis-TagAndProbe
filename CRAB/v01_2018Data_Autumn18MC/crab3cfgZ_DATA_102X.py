@@ -14,8 +14,10 @@ config.Data.inputDataset = ''
 # config.Data.useParent = True
 
 config.Data.inputDBS = 'global'
-config.Data.splitting = 'Automatic'
-# config.Data.unitsPerJob = 3
+# config.Data.splitting = 'Automatic'
+config.Data.splitting = 'LumiBased'
+config.Data.unitsPerJob = 20
+
 config.Data.outLFNDirBase = '/store/user/%s/' % (getUsernameFromSiteDB())
 config.Data.publication = False
 # config.Data.ignoreLocality = True
@@ -25,21 +27,21 @@ config.Site.storageSite = 'T2_KR_KNU'
 
 config.Data.lumiMask = '/afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions18/13TeV/PromptReco/Cert_314472-325175_13TeV_PromptReco_Collisions18_JSON.txt'
 
-version = '_v20190212_'
+version = '_v20190220_'
 # 'MultiCRAB' part
 if __name__ == '__main__':
     
     from CRABAPI.RawCommand import crabCommand
 
-    config.General.requestName = 'TnPTreeZ'+version+'17Sep2018_SingleMuon_Run2018Av2_GoldenJSON'
-    config.Data.inputDataset = '/SingleMuon/Run2018A-17Sep2018-v2/AOD'
-    config.JobType.psetName = '../../test/zmumu/tp_from_aod_Data_102X_Sep2018Rereco_v1.py'
-    crabCommand('submit', config = config)
+    # config.General.requestName = 'TnPTreeZ'+version+'17Sep2018_SingleMuon_Run2018Av2_GoldenJSON'
+    # config.Data.inputDataset = '/SingleMuon/Run2018A-17Sep2018-v2/AOD'
+    # config.JobType.psetName = '../../test/zmumu/tp_from_aod_Data_102X_Sep2018Rereco_v1.py'
+    # crabCommand('submit', config = config)
 
-    config.General.requestName = 'TnPTreeZ'+version+'17Sep2018_SingleMuon_Run2018Bv1_GoldenJSON'
-    config.Data.inputDataset = '/SingleMuon/Run2018B-17Sep2018-v1/AOD'
-    config.JobType.psetName = '../../test/zmumu/tp_from_aod_Data_102X_Sep2018Rereco_v1.py'
-    crabCommand('submit', config = config)
+    # config.General.requestName = 'TnPTreeZ'+version+'17Sep2018_SingleMuon_Run2018Bv1_GoldenJSON'
+    # config.Data.inputDataset = '/SingleMuon/Run2018B-17Sep2018-v1/AOD'
+    # config.JobType.psetName = '../../test/zmumu/tp_from_aod_Data_102X_Sep2018Rereco_v1.py'
+    # crabCommand('submit', config = config)
 
     config.General.requestName = 'TnPTreeZ'+version+'17Sep2018_SingleMuon_Run2018Cv1_GoldenJSON'
     config.Data.inputDataset = '/SingleMuon/Run2018C-17Sep2018-v1/AOD'

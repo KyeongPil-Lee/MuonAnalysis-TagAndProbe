@@ -10,9 +10,9 @@ config.JobType.psetName = '../../test/zmumu/tp_from_aod_MC_102X_v15.py'
 config.Data.inputDataset = ''
 
 config.Data.inputDBS = 'global'
-config.Data.splitting = 'Automatic'
-# config.Data.splitting = 'FileBased'
-# config.Data.unitsPerJob = 3
+# config.Data.splitting = 'Automatic'
+config.Data.splitting = 'FileBased'
+config.Data.unitsPerJob = 5
 config.Data.outLFNDirBase = '/store/user/%s/' % (getUsernameFromSiteDB())
 config.Data.publication = False
 
@@ -25,7 +25,7 @@ config.Site.storageSite = 'T2_KR_KNU'
 # config.Data.runRange = '%d-%d' % (FirstRun, LastRun)
 
 
-version = '_v20190212_'
+version = '_v20190220_'
 # 'MultiCRAB' part
 if __name__ == '__main__':
     
