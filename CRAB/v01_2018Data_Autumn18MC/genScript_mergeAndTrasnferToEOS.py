@@ -20,8 +20,8 @@ tool.xrdProtocol = "root://eoscms.cern.ch"
 # tool.eosPath = "/eos/cms/store/group/phys_muon/TagAndProbe/Run2018/102X"
 # tool.Register()
 
-# # -- SingleMuon tree
-# tool.SEPath = "/pnfs/knu.ac.kr/data/cms/store/user/kplee/SingleMuon"
+# -- SingleMuon tree
+tool.SEPath = "/pnfs/knu.ac.kr/data/cms/store/user/kplee/SingleMuon"
 
 # tool.crabDir = "crab_TnPTreeZ_v20190211_17Sep2018_SingleMuon_Run2018Av2_GoldenJSON"
 # tool.treeName = "TnPTreeZ_17Sep2018_SingleMuon_Run2018Av2_GoldenJSON.root"
