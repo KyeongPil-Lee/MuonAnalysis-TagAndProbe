@@ -6,7 +6,7 @@ tool = TransferToEOSTool()
 # tool.scriptName = "script_mergeAndTrasnferToEOS_JPsi.sh"
 # tool.scriptName = "script_mergeAndTrasnferToEOS_Z.sh"
 # tool.scriptName = "script_mergeAndTrasnferToEOS_Z_v02.sh"
-tool.scriptName = "script_mergeAndTrasnferToEOS_Z_v03.sh"
+tool.scriptName = "script_mergeAndTrasnferToEOS_Z_v04.sh"
 tool.xrdProtocol = "root://eoscms.cern.ch"
 
 # -- individual settings
@@ -33,17 +33,16 @@ tool.SEPath = "/pnfs/knu.ac.kr/data/cms/store/user/kplee/SingleMuon"
 # tool.eosPath = "/eos/cms/store/group/phys_muon/TagAndProbe/Run2018/102X"
 # tool.Register()
 
-tool.crabDir = "crab_TnPTreeZ_v20190211_17Sep2018_SingleMuon_Run2018Cv1_GoldenJSON"
-# tool.treeName = "TnPTreeZ_17Sep2018_SingleMuon_Run2018Cv1_GoldenJSON.root"
-tool.treeName = "TnPTreeZ_17Sep2018_SingleMuon_Run2018Cv1_GoldenJSON_62PercentStat.root"
+tool.crabDir = "crab_TnPTreeZ_v20190220_17Sep2018_SingleMuon_Run2018Cv1_GoldenJSON"
+tool.treeName = "TnPTreeZ_17Sep2018_SingleMuon_Run2018Cv1_GoldenJSON.root"
 tool.eosPath = "/eos/cms/store/group/phys_muon/TagAndProbe/Run2018/102X"
 tool.Register()
 
-tool.crabDir = "crab_TnPTreeZ_v20190211_SingleMuon_Run2018Dv2_GoldenJSON"
+# tool.crabDir = "crab_TnPTreeZ_v20190211_SingleMuon_Run2018Dv2_GoldenJSON"
 # tool.treeName = "TnPTreeZ_SingleMuon_Run2018Dv2_GoldenJSON.root"
-tool.treeName = "TnPTreeZ_SingleMuon_Run2018Dv2_GoldenJSON_99PercentStat.root"
-tool.eosPath = "/eos/cms/store/group/phys_muon/TagAndProbe/Run2018/102X"
-tool.Register()
+# tool.treeName = "TnPTreeZ_SingleMuon_Run2018Dv2_GoldenJSON_99PercentStat.root"
+# tool.eosPath = "/eos/cms/store/group/phys_muon/TagAndProbe/Run2018/102X"
+# tool.Register()
 
 
 
