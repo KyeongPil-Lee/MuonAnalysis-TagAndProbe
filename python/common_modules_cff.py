@@ -264,3 +264,9 @@ probeMetMt = cms.EDProducer("MuonMetMT",
     probes = cms.InputTag("probeMuons"),
     met = cms.InputTag("pfMet"),
 )
+
+muonHighPt = cms.EDProducer("MuonHighPt",
+    probes = cms.InputTag("probeMuons"),
+)
+muonHighPtTags = muonHighPt.clone(probes = "tagMuons")
+
