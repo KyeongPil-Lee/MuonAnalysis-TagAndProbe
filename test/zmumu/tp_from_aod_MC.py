@@ -10,7 +10,7 @@ process.MessageLogger.cerr.FwkReport.reportEvery = 1000
 process.source = cms.Source("PoolSource", 
     fileNames = cms.untracked.vstring(),
 )
-process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(-1))
+process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(1000))
 
 process.load('Configuration.StandardSequences.GeometryRecoDB_cff')
 process.load('Configuration.StandardSequences.MagneticField_38T_cff')
@@ -19,13 +19,15 @@ process.load("Configuration.StandardSequences.Reconstruction_cff")
 
 import os
 if "CMSSW_8_0_" in os.environ['CMSSW_VERSION']:
-    process.GlobalTag.globaltag = cms.string('80X_mcRun2_asymptotic_v14')
+    process.GlobalTag.globaltag = cms.string('80X_mcRun2_asymptotic_2016_TrancheIV_v6')
     process.source.fileNames = [
-        '/store/mc/RunIISpring16reHLT80/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/40001/3459A4AB-D85C-E611-81F5-02163E011488.root',
-        '/store/mc/RunIISpring16reHLT80/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/40001/8AB9296A-C55C-E611-9291-02163E012E69.root',
-        '/store/mc/RunIISpring16reHLT80/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/40001/9A8A076A-C55C-E611-BE5A-02163E012E69.root',
-        '/store/mc/RunIISpring16reHLT80/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/40002/4AC3D851-C45C-E611-8BFD-02163E012E69.root',
-        '/store/mc/RunIISpring16reHLT80/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/40003/ACAA69A9-D85C-E611-983F-02163E011488.root',
+        '/store/mc/RunIISummer16DR80Premix/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6_ext1-v1/120000/3A22AAF3-47B2-E611-A7C0-008CFA5D275C.root',
+        '/store/mc/RunIISummer16DR80Premix/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6_ext1-v1/120000/445FC513-4DB2-E611-A0B3-008CFA110D5C.root',
+        '/store/mc/RunIISummer16DR80Premix/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6_ext1-v1/120000/FAB94FBE-61B2-E611-BF57-008CFA197A28.root',
+        '/store/mc/RunIISummer16DR80Premix/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6_ext1-v1/120000/AACFF2EE-7CB2-E611-9A21-008CFA197E0C.root',
+        '/store/mc/RunIISummer16DR80Premix/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6_ext1-v1/120000/E2092E23-87B2-E611-8746-002590574570.root',
+        '/store/mc/RunIISummer16DR80Premix/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6_ext1-v1/120000/3A258D5F-54B3-E611-BC3D-008CFA110AB4.root',
+        '/store/mc/RunIISummer16DR80Premix/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6_ext1-v1/120000/DECA6A73-B4B3-E611-A634-0090FAA572C0.root',
     ]
 else: raise RuntimeError, "Unknown CMSSW version %s" % os.environ['CMSSW_VERSION']
 
@@ -155,6 +157,7 @@ process.tpTree = cms.EDAnalyzer("TagProbeFitTreeProducer",
         activity_miniIsoPhotons = cms.InputTag("muonMiniIsoPhotons","activity"), 
         nSplitTk  = cms.InputTag("splitTrackTagger"),
         mt  = cms.InputTag("probeMetMt","mt"),
+        CutBasedIdGlobalHighPt_new = cms.InputTag("muonHighPt","highPtIDNew"),
     ),
     flags = cms.PSet(
        TrackQualityFlags,
@@ -186,6 +189,7 @@ process.tpTree = cms.EDAnalyzer("TagProbeFitTreeProducer",
         nSplitTk  = cms.InputTag("splitTrackTagger"),
         met = cms.InputTag("tagMetMt","met"),
         mt  = cms.InputTag("tagMetMt","mt"),
+        CutBasedIdGlobalHighPt_new = cms.InputTag("muonHighPtTags","highPtIDNew"),
     ),
     tagFlags = cms.PSet(HighPtTriggerFlags,HighPtTriggerFlagsDebug),
     pairVariables = cms.PSet(
@@ -243,6 +247,7 @@ process.extraProbeVariablesSeq = cms.Sequence(
     process.computeCorrectedIso + 
     process.splitTrackTagger +
     process.muonDxyPVdzmin + 
+    process.muonHighPt + 
     process.probeMetMt + process.tagMetMt +
     process.miniIsoSeq +
     # process.ak4PFCHSJetsL1L2L3 +
@@ -265,6 +270,7 @@ process.tnpSimpleSequence = cms.Sequence(
     process.newTunePVals +
     process.genAdditionalInfo +
     process.muonDxyPVdzminTags +
+    process.muonHighPtTags + 
     process.tpTree
 )
 
