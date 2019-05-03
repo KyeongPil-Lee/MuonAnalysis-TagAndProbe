@@ -12,7 +12,7 @@ process.MessageLogger.cerr.FwkReport.reportEvery = 1000
 process.source = cms.Source("PoolSource", 
     fileNames = cms.untracked.vstring(),
 )
-process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(-1) )
+process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(1000) )
 
 process.load('Configuration.StandardSequences.GeometryRecoDB_cff')
 process.load('Configuration.StandardSequences.MagneticField_cff')
@@ -61,19 +61,15 @@ elif "CMSSW_7_6_" in os.environ['CMSSW_VERSION']:
             '/store/data/Run2015D/SingleMuon/AOD/16Dec2015-v1/10000/24537A2D-0BA8-E511-8D7C-20CF300E9ECF.root',
     ]
 elif "CMSSW_8_0_"in os.environ['CMSSW_VERSION']:
-    process.GlobalTag.globaltag = cms.string('80X_dataRun2_Prompt_v9')
+    process.GlobalTag.globaltag = cms.string('80X_dataRun2_2016LegacyRepro_v4')
 
+    # -- legacy rereco datasets
     process.source.fileNames = [
-        '/store/data/Run2016C/SingleMuon/AOD/PromptReco-v2/000/276/283/00000/0001E5C0-AE44-E611-9F88-02163E014235.root',
-        '/store/data/Run2016C/SingleMuon/AOD/PromptReco-v2/000/276/283/00000/007E4250-AE44-E611-867E-02163E011AB6.root',
-        '/store/data/Run2016C/SingleMuon/AOD/PromptReco-v2/000/276/283/00000/00997A4B-B044-E611-9FBB-02163E011EDE.root',
-        '/store/data/Run2016C/SingleMuon/AOD/PromptReco-v2/000/276/283/00000/02BB51AA-B044-E611-8DB0-02163E014168.root',
-        '/store/data/Run2016C/SingleMuon/AOD/PromptReco-v2/000/276/283/00000/0466BA91-AE44-E611-825B-02163E0136EF.root',
-        '/store/data/Run2016C/SingleMuon/AOD/PromptReco-v2/000/276/283/00000/0485506E-AE44-E611-A24B-02163E0140ED.root',
-        '/store/data/Run2016C/SingleMuon/AOD/PromptReco-v2/000/276/283/00000/0494A580-B044-E611-993A-02163E012944.root',
-        '/store/data/Run2016C/SingleMuon/AOD/PromptReco-v2/000/276/283/00000/04C4B374-B044-E611-97D0-02163E011ECD.root',
-        '/store/data/Run2016C/SingleMuon/AOD/PromptReco-v2/000/276/283/00000/06056373-B044-E611-B41D-02163E0137AA.root',
-        '/store/data/Run2016C/SingleMuon/AOD/PromptReco-v2/000/276/283/00000/064D926A-B044-E611-9CAA-02163E011FCC.root',
+            '/store/data/Run2016H/SingleMuon/AOD/07Aug17-v1/90000/767DF967-0F94-E711-827F-0CC47A78A3EE.root',
+            '/store/data/Run2016H/SingleMuon/AOD/07Aug17-v1/90000/CCBA47EC-B794-E711-A08C-0CC47A4D7668.root',
+            '/store/data/Run2016H/SingleMuon/AOD/07Aug17-v1/10000/F068EC7F-FB96-E711-96FF-7845C4FC3BFF.root',
+            '/store/data/Run2016H/SingleMuon/AOD/07Aug17-v1/110000/EED615B0-8290-E711-BB82-0025905C96A6.root',
+            '/store/data/Run2016H/SingleMuon/AOD/07Aug17-v1/110000/76A964E5-9490-E711-A3A5-0025905C54BA.root',
         ]
  
 else: raise RuntimeError, "Unknown CMSSW version %s" % os.environ['CMSSW_VERSION']
@@ -218,6 +214,7 @@ process.tpTree = cms.EDAnalyzer("TagProbeFitTreeProducer",
         activity_miniIsoPhotons = cms.InputTag("muonMiniIsoPhotons","activity"),
         nSplitTk  = cms.InputTag("splitTrackTagger"),
         mt  = cms.InputTag("probeMetMt","mt"),
+        CutBasedIdGlobalHighPt_new = cms.InputTag("muonHighPt","highPtIDNew"),
     ),
     flags = cms.PSet(
        TrackQualityFlags,
@@ -254,6 +251,7 @@ process.tpTree = cms.EDAnalyzer("TagProbeFitTreeProducer",
         instLumi = cms.InputTag("addEventInfo", "instLumi"),
         met = cms.InputTag("tagMetMt","met"),
         mt  = cms.InputTag("tagMetMt","mt"),
+        CutBasedIdGlobalHighPt_new = cms.InputTag("muonHighPtTags","highPtIDNew"),
     ),
     tagFlags = cms.PSet(HighPtTriggerFlags,HighPtTriggerFlagsDebug),
     pairVariables = cms.PSet(
@@ -301,6 +299,7 @@ process.extraProbeVariablesSeq = cms.Sequence(
     process.computeCorrectedIso + 
     process.splitTrackTagger +
     process.muonDxyPVdzmin + 
+    process.muonHighPt + 
     process.probeMetMt + process.tagMetMt +
     process.miniIsoSeq +
     # process.ak4PFCHSJetsL1L2L3 +
@@ -324,6 +323,7 @@ process.tnpSimpleSequence = cms.Sequence(
     process.bestPairByZMass + 
     process.newTunePVals +
     process.muonDxyPVdzminTags +
+    process.muonHighPtTags + 
     process.tpTree
 )
 
