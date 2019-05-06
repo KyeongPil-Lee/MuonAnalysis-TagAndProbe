@@ -510,14 +510,14 @@ if True:
     process.tpTreeSta.variables.tk0_deltaR_NoZ   = cms.InputTag("staToTkMatchNoZ0","deltaR")
     process.tpTreeSta.variables.tk0_deltaEta_NoZ = cms.InputTag("staToTkMatchNoZ0","deltaEta")
 
-process.tagAndProbeSta = cms.Path( 
-    process.fastFilter +
-    process.fastPseudoTnPSta +
-    process.mergedMuons * process.patMuonsWithTriggerSequence +
-    process.muonsSta                       +
-    process.patMuonsWithTriggerSequenceSta +
-    process.tnpSimpleSequenceSta
-)
+# process.tagAndProbeSta = cms.Path( 
+#     process.fastFilter +
+#     process.fastPseudoTnPSta +
+#     process.mergedMuons * process.patMuonsWithTriggerSequence +
+#     process.muonsSta                       +
+#     process.patMuonsWithTriggerSequenceSta +
+#     process.tnpSimpleSequenceSta
+# )
 
 
 if True: # turn on for tracking efficiency using L1 seeds
@@ -653,7 +653,7 @@ process.fakeRateZPlusProbe = cms.Path(
 
 process.schedule = cms.Schedule(
    process.tagAndProbe, 
-   process.tagAndProbeSta, 
+   # process.tagAndProbeSta, 
    process.tagAndProbeTkL1
 )
 
