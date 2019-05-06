@@ -83,14 +83,15 @@ elif "CMSSW_9_2_"in os.environ['CMSSW_VERSION']:
         '/store/express/Run2017B/ExpressPhysics/FEVT/Express-v1/000/297/101/00000/0C01D9CD-D253-E711-9D2F-02163E013511.root'
     ]  
 elif "CMSSW_9_4_" in os.environ['CMSSW_VERSION']:
-    process.GlobalTag.globaltag = cms.string('94X_dataRun2_ReReco_EOY17_v6')
+    process.GlobalTag.globaltag = cms.string('94X_dataRun2_ReReco_EOY17_v2')
 
     process.source.fileNames = [
-        '/store/data/Run2017H/SingleMuon/AOD/17Nov2017-v2/80000/8EA609EB-A334-E811-8869-0CC47AA53D76.root',
-        '/store/data/Run2017H/SingleMuon/AOD/17Nov2017-v2/80000/8070FEEC-A534-E811-894C-0CC47A57D086.root',
-        '/store/data/Run2017H/SingleMuon/AOD/17Nov2017-v2/80000/C0E80CC9-A834-E811-A86C-0025901AC12A.root',
-        '/store/data/Run2017H/SingleMuon/AOD/17Nov2017-v2/80000/2ED806DB-A834-E811-9CFD-003048CB860C.root',
-        '/store/data/Run2017H/SingleMuon/AOD/17Nov2017-v2/80000/A645DA6A-E234-E811-B2AC-002590D9D8B6.root',                    
+        '/store/data/Run2017F/SingleMuon/AOD/17Nov2017-v1/010000/745F0283-A3EC-E711-8180-0CC47A4D7634.root',
+        '/store/data/Run2017F/SingleMuon/AOD/17Nov2017-v1/010000/D8E2BA79-A3EC-E711-892F-0CC47A4D7632.root',
+        '/store/data/Run2017F/SingleMuon/AOD/17Nov2017-v1/010000/200F9661-A3EC-E711-B0A7-0CC47A4D7630.root',
+        '/store/data/Run2017F/SingleMuon/AOD/17Nov2017-v1/010000/82B8CC6A-A3EC-E711-98D0-0CC47A78A440.root',
+        '/store/data/Run2017F/SingleMuon/AOD/17Nov2017-v1/010000/B6A71C5C-A3EC-E711-8C6E-003048FFCBB2.root',
+        '/store/data/Run2017F/SingleMuon/AOD/17Nov2017-v1/010000/B6A6ED54-A3EC-E711-8BDD-0CC47A4D7630.root',
     ]
 elif "CMSSW_10_2_" in os.environ['CMSSW_VERSION']:
     process.GlobalTag.globaltag = cms.string('102X_dataRun2_Prompt_v11')
