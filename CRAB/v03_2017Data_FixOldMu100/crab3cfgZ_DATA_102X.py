@@ -5,7 +5,7 @@ config.General.requestName = ''
 config.General.workArea = 'CRABDir'
 
 config.JobType.pluginName = 'Analysis'
-config.JobType.psetName = '../../test/zmumu/tp_from_aod_Data_94X_dataRun2_ReReco_EOY17_v6.py'
+config.JobType.psetName = '../../test/zmumu/tp_from_aod_Data_94X_dataRun2_ReReco_EOY17_v2.py'
 # config.JobType.numCores = 4
 # config.JobType.maxMemoryMB = 2500
 # config.JobType.maxJobRuntimeMin = 2000
