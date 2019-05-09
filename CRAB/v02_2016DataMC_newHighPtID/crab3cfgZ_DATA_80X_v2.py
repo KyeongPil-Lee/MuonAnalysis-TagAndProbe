@@ -41,22 +41,22 @@ if __name__ == '__main__':
     # config.Data.inputDataset = '/SingleMuon/Run2016C-07Aug17-v1/AOD'
     # crabCommand('submit', config = config)
 
-    # config.General.requestName = 'TnPTreeZ'+version+'07Aug17_SingleMuon_Run2016D_GoldenJSON'
-    # config.Data.inputDataset = '/SingleMuon/Run2016D-07Aug17-v1/AOD'
-    # crabCommand('submit', config = config)
+    config.General.requestName = 'TnPTreeZ'+version+'07Aug17_SingleMuon_Run2016D_GoldenJSON'
+    config.Data.inputDataset = '/SingleMuon/Run2016D-07Aug17-v1/AOD'
+    crabCommand('submit', config = config)
 
     # config.General.requestName = 'TnPTreeZ'+version+'07Aug17_SingleMuon_Run2016E_GoldenJSON'
     # config.Data.inputDataset = '/SingleMuon/Run2016E-07Aug17-v1/AOD'
     # crabCommand('submit', config = config)
 
-    config.General.requestName = 'TnPTreeZ'+version+'07Aug17_SingleMuon_Run2016F_GoldenJSON'
-    config.Data.inputDataset = '/SingleMuon/Run2016F-07Aug17-v1/AOD'
+    # config.General.requestName = 'TnPTreeZ'+version+'07Aug17_SingleMuon_Run2016F_GoldenJSON'
+    # config.Data.inputDataset = '/SingleMuon/Run2016F-07Aug17-v1/AOD'
+    # crabCommand('submit', config = config)
+
+    config.General.requestName = 'TnPTreeZ'+version+'07Aug17_SingleMuon_Run2016G_GoldenJSON'
+    config.Data.inputDataset = '/SingleMuon/Run2016G-07Aug17-v1/AOD'
     crabCommand('submit', config = config)
 
-    # config.General.requestName = 'TnPTreeZ'+version+'07Aug17_SingleMuon_Run2016G_GoldenJSON'
-    # config.Data.inputDataset = '/SingleMuon/Run2016G-07Aug17-v1/AOD'
-    # crabCommand('submit', config = config)
-
-    # config.General.requestName = 'TnPTreeZ'+version+'07Aug17_SingleMuon_Run2016H_GoldenJSON'
-    # config.Data.inputDataset = '/SingleMuon/Run2016H-07Aug17-v1/AOD'
-    # crabCommand('submit', config = config)
+    config.General.requestName = 'TnPTreeZ'+version+'07Aug17_SingleMuon_Run2016H_GoldenJSON'
+    config.Data.inputDataset = '/SingleMuon/Run2016H-07Aug17-v1/AOD'
+    crabCommand('submit', config = config)
