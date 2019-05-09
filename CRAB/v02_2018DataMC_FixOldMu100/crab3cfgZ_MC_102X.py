@@ -12,7 +12,7 @@ config.Data.inputDataset = ''
 config.Data.inputDBS = 'global'
 # config.Data.splitting = 'Automatic'
 config.Data.splitting = 'FileBased'
-config.Data.unitsPerJob = 20
+config.Data.unitsPerJob = 10
 config.Data.outLFNDirBase = '/store/user/%s/' % (getUsernameFromSiteDB())
 config.Data.publication = False
 
@@ -25,7 +25,7 @@ config.Site.storageSite = 'T2_KR_KNU'
 # config.Data.runRange = '%d-%d' % (FirstRun, LastRun)
 
 
-version = '_v20190509_'
+version = '_v20190509_10FilesPerJob_'
 # 'MultiCRAB' part
 if __name__ == '__main__':
     
