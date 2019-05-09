@@ -221,7 +221,7 @@ process.tpTree = cms.EDAnalyzer("TagProbeFitTreeProducer",
         mt  = cms.InputTag("tagMetMt","mt"),
         CutBasedIdGlobalHighPt_new = cms.InputTag("muonHighPtTags","highPtIDNew"),
         # CutBasedIdGlobalHighPt_2 = cms.InputTag("muonHighPtTags","highPtID2"),
-        CutBasedIdGlobalHighPt_2 = cms.InputTag("muonHighPtTags","highPtID"),
+        # CutBasedIdGlobalHighPt_2 = cms.InputTag("muonHighPtTags","highPtID"),
     ),
     mcVariables = cms.PSet(
         pt = cms.string('pt'),
