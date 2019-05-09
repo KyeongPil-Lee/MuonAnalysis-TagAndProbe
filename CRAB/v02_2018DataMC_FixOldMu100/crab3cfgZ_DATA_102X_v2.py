@@ -33,22 +33,22 @@ if __name__ == '__main__':
     
     from CRABAPI.RawCommand import crabCommand
 
-    # config.General.requestName = 'TnPTreeZ'+version+'17Sep2018_SingleMuon_Run2018Av2_GoldenJSON'
-    # config.Data.inputDataset = '/SingleMuon/Run2018A-17Sep2018-v2/AOD'
-    # config.JobType.psetName = '../../test/zmumu/tp_from_aod_Data_102X_Sep2018Rereco_v1.py'
-    # crabCommand('submit', config = config)
+    config.General.requestName = 'TnPTreeZ'+version+'17Sep2018_SingleMuon_Run2018Av2_GoldenJSON'
+    config.Data.inputDataset = '/SingleMuon/Run2018A-17Sep2018-v2/AOD'
+    config.JobType.psetName = '../../test/zmumu/tp_from_aod_Data_102X_Sep2018Rereco_v1.py'
+    crabCommand('submit', config = config)
 
     # config.General.requestName = 'TnPTreeZ'+version+'17Sep2018_SingleMuon_Run2018Bv1_GoldenJSON'
     # config.Data.inputDataset = '/SingleMuon/Run2018B-17Sep2018-v1/AOD'
     # config.JobType.psetName = '../../test/zmumu/tp_from_aod_Data_102X_Sep2018Rereco_v1.py'
     # crabCommand('submit', config = config)
 
-    config.General.requestName = 'TnPTreeZ'+version+'17Sep2018_SingleMuon_Run2018Cv1_GoldenJSON'
-    config.Data.inputDataset = '/SingleMuon/Run2018C-17Sep2018-v1/AOD'
-    config.JobType.psetName = '../../test/zmumu/tp_from_aod_Data_102X_Sep2018Rereco_v1.py'
-    crabCommand('submit', config = config)
-
-    # config.General.requestName = 'TnPTreeZ'+version+'SingleMuon_Run2018Dv2_GoldenJSON'
-    # config.Data.inputDataset = '/SingleMuon/Run2018D-PromptReco-v2/AOD'
-    # config.JobType.psetName = '../../test/zmumu/tp_from_aod_Data_102X_Prompt_v11.py'
+    # config.General.requestName = 'TnPTreeZ'+version+'17Sep2018_SingleMuon_Run2018Cv1_GoldenJSON'
+    # config.Data.inputDataset = '/SingleMuon/Run2018C-17Sep2018-v1/AOD'
+    # config.JobType.psetName = '../../test/zmumu/tp_from_aod_Data_102X_Sep2018Rereco_v1.py'
     # crabCommand('submit', config = config)
+
+    config.General.requestName = 'TnPTreeZ'+version+'SingleMuon_Run2018Dv2_GoldenJSON'
+    config.Data.inputDataset = '/SingleMuon/Run2018D-PromptReco-v2/AOD'
+    config.JobType.psetName = '../../test/zmumu/tp_from_aod_Data_102X_Prompt_v11.py'
+    crabCommand('submit', config = config)
