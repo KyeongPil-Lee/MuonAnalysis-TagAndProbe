@@ -25,7 +25,7 @@ config.Site.storageSite = 'T2_KR_KNU'
 # config.Data.runRange = '%d-%d' % (FirstRun, LastRun)
 
 
-version = '_v20190509_'
+version = '_v20190509_10FilesPerJob_'
 # 'MultiCRAB' part
 if __name__ == '__main__':
     
