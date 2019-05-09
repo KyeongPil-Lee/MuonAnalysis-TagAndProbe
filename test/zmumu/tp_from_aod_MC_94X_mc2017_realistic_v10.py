@@ -12,7 +12,7 @@ process.source = cms.Source("PoolSource",
 )
 #process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(-1))
 #process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(10))
-process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(100))
+process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(5000))
 
 process.load('Configuration.StandardSequences.GeometryRecoDB_cff')
 process.load('Configuration.StandardSequences.MagneticField_38T_cff')
