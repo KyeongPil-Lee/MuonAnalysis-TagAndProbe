@@ -154,3 +154,17 @@ scram b -j 4 >&scram.log&
 tail -f scram.log
 ```
 
+
+
+## Recipe (10_6_X)
+
+Setup is exactly same with 10_2_X case
+
+### CAVEAT
+
+* Wrong variables in ```tagVariables``` makes **errors** in 10_6_X
+  * e.g. ```ExtraIsolationVariables```, ```nSplitTk  = cms.InputTag("splitTrackTagger")```
+  * They are not calculated for tag muons, but probe muons: tag muon does not have such valueMap
+  * It was ignored in the previous CMSSW and just fill the dummy numbers in the branch, but in CMSSW_10_6_X, it makes error
+  * **All of them should be commented out**
+    * Example: ```test/zmumu/tp_from_aod_MC_105X_mc2017_realistic_v7.py```
