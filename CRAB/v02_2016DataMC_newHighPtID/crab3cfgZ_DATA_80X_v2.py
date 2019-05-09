@@ -16,7 +16,7 @@ config.Data.inputDataset = ''
 config.Data.inputDBS = 'global'
 # config.Data.splitting = 'Automatic'
 config.Data.splitting = 'LumiBased'
-config.Data.unitsPerJob = 200
+config.Data.unitsPerJob = 100
 
 config.Data.outLFNDirBase = '/store/user/%s/' % (getUsernameFromSiteDB())
 config.Data.publication = False
@@ -27,7 +27,7 @@ config.Site.storageSite = 'T2_KR_KNU'
 
 config.Data.lumiMask = '/afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions16/13TeV/ReReco/Final/Cert_271036-284044_13TeV_23Sep2016ReReco_Collisions16_JSON.txt'
 
-version = '_v20190509_'
+version = '_v20190509_100LumiPerJob_'
 # 'MultiCRAB' part
 if __name__ == '__main__':
     
@@ -49,9 +49,9 @@ if __name__ == '__main__':
     # config.Data.inputDataset = '/SingleMuon/Run2016E-07Aug17-v1/AOD'
     # crabCommand('submit', config = config)
 
-    # config.General.requestName = 'TnPTreeZ'+version+'07Aug17_SingleMuon_Run2016F_GoldenJSON'
-    # config.Data.inputDataset = '/SingleMuon/Run2016F-07Aug17-v1/AOD'
-    # crabCommand('submit', config = config)
+    config.General.requestName = 'TnPTreeZ'+version+'07Aug17_SingleMuon_Run2016F_GoldenJSON'
+    config.Data.inputDataset = '/SingleMuon/Run2016F-07Aug17-v1/AOD'
+    crabCommand('submit', config = config)
 
     config.General.requestName = 'TnPTreeZ'+version+'07Aug17_SingleMuon_Run2016G_GoldenJSON'
     config.Data.inputDataset = '/SingleMuon/Run2016G-07Aug17-v1/AOD'
