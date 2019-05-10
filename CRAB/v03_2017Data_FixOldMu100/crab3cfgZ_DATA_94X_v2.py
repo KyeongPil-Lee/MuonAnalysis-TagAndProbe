@@ -27,27 +27,27 @@ config.Site.storageSite = 'T2_KR_KNU'
 
 config.Data.lumiMask = '/afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions17/13TeV/ReReco/Cert_294927-306462_13TeV_EOY2017ReReco_Collisions17_JSON.txt'
 
-version = '_v20190509_100LumiPerJob_'
+version = '_v20190510_100LumiPerJob_'
 # 'MultiCRAB' part
 if __name__ == '__main__':
     
     from CRABAPI.RawCommand import crabCommand
 
-    config.General.requestName = 'TnPTreeZ'+version+'17Nov2017_SingleMuon_Run2017Bv1_GoldenJSON'
-    config.Data.inputDataset = '/SingleMuon/Run2017B-17Nov2017-v1/AOD'
-    crabCommand('submit', config = config)
+    # config.General.requestName = 'TnPTreeZ'+version+'17Nov2017_SingleMuon_Run2017Bv1_GoldenJSON'
+    # config.Data.inputDataset = '/SingleMuon/Run2017B-17Nov2017-v1/AOD'
+    # crabCommand('submit', config = config)
 
-    config.General.requestName = 'TnPTreeZ'+version+'17Nov2017_SingleMuon_Run2017Cv1_GoldenJSON'
-    config.Data.inputDataset = '/SingleMuon/Run2017C-17Nov2017-v1/AOD'
-    crabCommand('submit', config = config)
+    # config.General.requestName = 'TnPTreeZ'+version+'17Nov2017_SingleMuon_Run2017Cv1_GoldenJSON'
+    # config.Data.inputDataset = '/SingleMuon/Run2017C-17Nov2017-v1/AOD'
+    # crabCommand('submit', config = config)
 
     # config.General.requestName = 'TnPTreeZ'+version+'17Nov2017_SingleMuon_Run2017Dv1_GoldenJSON'
     # config.Data.inputDataset = '/SingleMuon/Run2017D-17Nov2017-v1/AOD'
     # crabCommand('submit', config = config)
 
-    config.General.requestName = 'TnPTreeZ'+version+'17Nov2017_SingleMuon_Run2017Ev1_GoldenJSON'
-    config.Data.inputDataset = '/SingleMuon/Run2017E-17Nov2017-v1/AOD'
-    crabCommand('submit', config = config)
+    # config.General.requestName = 'TnPTreeZ'+version+'17Nov2017_SingleMuon_Run2017Ev1_GoldenJSON'
+    # config.Data.inputDataset = '/SingleMuon/Run2017E-17Nov2017-v1/AOD'
+    # crabCommand('submit', config = config)
 
     config.General.requestName = 'TnPTreeZ'+version+'17Nov2017_SingleMuon_Run2017Fv1_GoldenJSON'
     config.Data.inputDataset = '/SingleMuon/Run2017F-17Nov2017-v1/AOD'
