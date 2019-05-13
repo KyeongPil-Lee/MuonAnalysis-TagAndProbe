@@ -49,9 +49,9 @@ tool.treeName = "TnPTreeZ_07Aug17_SingleMuon_Run2016G_GoldenJSON_Incomplete_2019
 tool.eosPath = "None"
 tool.Register()
 
-tool.crabDir = "crab_TnPTreeZ_v20190509_100LumiPerJob_07Aug17_SingleMuon_Run2016H_GoldenJSON"
-tool.treeName = "TnPTreeZ_07Aug17_SingleMuon_Run2016H_GoldenJSON_Incomplete_20190513.root"
-tool.eosPath = "None"
-tool.Register()
+# tool.crabDir = "crab_TnPTreeZ_v20190509_100LumiPerJob_07Aug17_SingleMuon_Run2016H_GoldenJSON"
+# tool.treeName = "TnPTreeZ_07Aug17_SingleMuon_Run2016H_GoldenJSON_Incomplete_20190513.root"
+# tool.eosPath = "None"
+# tool.Register()
 
 tool.GenScript()
