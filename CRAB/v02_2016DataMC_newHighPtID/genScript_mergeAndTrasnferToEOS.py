@@ -2,13 +2,7 @@ from MuonAnalysis.TagAndProbe.TransferToEOSTool import *
 
 tool = TransferToEOSTool()
 # -- common settings
-# tool.scriptName = "script_mergeAndTrasnferToEOS.sh"
-# tool.scriptName = "script_mergeAndTrasnferToEOS_JPsi.sh"
-# tool.scriptName = "script_mergeAndTrasnferToEOS_Z.sh"
-# tool.scriptName = "script_mergeAndTrasnferToEOS_Z_v02.sh"
-# tool.scriptName = "script_mergeAndTrasnferToEOS_Z_v04.sh"
-# tool.scriptName = "script_mergeAndTrasnferToEOS_Z_v05.sh"
-tool.scriptName = "script_mergeAndTrasnferToEOS_Z_v06.sh"
+tool.scriptName = "script_mergeAndTrasnferToEOS.sh"
 tool.xrdProtocol = "root://eoscms.cern.ch"
 
 # -- individual settings
@@ -24,57 +18,40 @@ tool.xrdProtocol = "root://eoscms.cern.ch"
 # -- SingleMuon tree
 tool.SEPath = "/pnfs/knu.ac.kr/data/cms/store/user/kplee/SingleMuon"
 
-# tool.crabDir = "crab_TnPTreeZ_v20190211_17Sep2018_SingleMuon_Run2018Av2_GoldenJSON"
-# tool.treeName = "TnPTreeZ_17Sep2018_SingleMuon_Run2018Av2_GoldenJSON.root"
+tool.crabDir = "crab_TnPTreeZ_v20190504_07Aug17_SingleMuon_Run2016Bver2_GoldenJSON"
+tool.treeName = "TnPTreeZ_07Aug17_SingleMuon_Run2016Bver2_GoldenJSON.root"
 # tool.eosPath = "/eos/cms/store/group/phys_muon/TagAndProbe/Run2018/102X"
-# tool.Register()
-
-# tool.crabDir = "crab_TnPTreeZ_v20190211_17Sep2018_SingleMuon_Run2018Bv1_GoldenJSON"
-# tool.treeName = "TnPTreeZ_17Sep2018_SingleMuon_Run2018Bv1_GoldenJSON.root"
-# tool.eosPath = "/eos/cms/store/group/phys_muon/TagAndProbe/Run2018/102X"
-# tool.Register()
-
-# tool.crabDir = "crab_TnPTreeZ_v20190220_17Sep2018_SingleMuon_Run2018Cv1_GoldenJSON"
-# tool.treeName = "TnPTreeZ_17Sep2018_SingleMuon_Run2018Cv1_GoldenJSON.root"
-# tool.eosPath = "/eos/cms/store/group/phys_muon/TagAndProbe/Run2018/102X"
-# tool.Register()
-
-tool.crabDir = "crab_TnPTreeZ_v20190220_SingleMuon_Run2018Dv2_GoldenJSON"
-tool.treeName = "TnPTreeZ_SingleMuon_Run2018Dv2_GoldenJSON.root"
-tool.eosPath = "/eos/cms/store/group/phys_muon/TagAndProbe/Run2018/102X"
+tool.eosPath = "None"
 tool.Register()
 
+tool.crabDir = "crab_TnPTreeZ_v20190504_07Aug17_SingleMuon_Run2016C_GoldenJSON"
+tool.treeName = "TnPTreeZ_07Aug17_SingleMuon_Run2016C_GoldenJSON.root"
+tool.eosPath = "None"
+tool.Register()
 
-# # -- J/Psi MC tree
-# tool.SEPath = "/pnfs/knu.ac.kr/data/cms/store/user/kplee/JpsiToMuMu_JpsiPt8_TuneCP5_13TeV-pythia8"
+tool.crabDir = "crab_TnPTreeZ_v20190509_100LumiPerJob_07Aug17_SingleMuon_Run2016D_GoldenJSON"
+tool.treeName = "TnPTreeZ_07Aug17_SingleMuon_Run2016D_GoldenJSON_Incomplete_20190513.root"
+tool.eosPath = "None"
+tool.Register()
 
-# tool.crabDir = "crab_TnPTreeJPsi_v20190211_102XAutumn18_JpsiToMuMu_JpsiPt8_Pythia8"
-# tool.treeName = "TnPTreeJPsi_102XAutumn18_JpsiToMuMu_JpsiPt8_Pythia8.root"
-# tool.eosPath = "/eos/cms/store/group/phys_muon/TagAndProbe/Run2018/102X"
-# tool.Register()
+tool.crabDir = "crab_TnPTreeZ_v20190504_07Aug17_SingleMuon_Run2016E_GoldenJSON"
+tool.treeName = "TnPTreeZ_07Aug17_SingleMuon_Run2016E_GoldenJSON.root"
+tool.eosPath = "None"
+tool.Register()
 
-# # -- Charmonium tree, 2018 data
-# tool.SEPath = "/pnfs/knu.ac.kr/data/cms/store/user/kplee/Charmonium"
+tool.crabDir = "crab_TnPTreeZ_v20190509_100LumiPerJob_07Aug17_SingleMuon_Run2016F_GoldenJSON"
+tool.treeName = "TnPTreeZ_07Aug17_SingleMuon_Run2016F_GoldenJSON_Incomplete_20190513.root"
+tool.eosPath = "None"
+tool.Register()
 
-# tool.crabDir = "crab_TnPTreeJPsi_v20190211_17Sep2018_Charmonium_Run2018Av1_GoldenJSON"
-# tool.treeName = "TnPTreeJPsi_17Sep2018_Charmonium_Run2018Av1_GoldenJSON.root"
-# tool.eosPath = "/eos/cms/store/group/phys_muon/TagAndProbe/Run2018/102X"
-# tool.Register()
+tool.crabDir = "crab_TnPTreeZ_v20190509_100LumiPerJob_07Aug17_SingleMuon_Run2016G_GoldenJSON"
+tool.treeName = "TnPTreeZ_07Aug17_SingleMuon_Run2016G_GoldenJSON_Incomplete_20190513.root"
+tool.eosPath = "None"
+tool.Register()
 
-# tool.crabDir = "crab_TnPTreeJPsi_v20190211_17Sep2018_Charmonium_Run2018Bv1_GoldenJSON"
-# tool.treeName = "TnPTreeJPsi_17Sep2018_Charmonium_Run2018Bv1_GoldenJSON.root"
-# tool.eosPath = "/eos/cms/store/group/phys_muon/TagAndProbe/Run2018/102X"
-# tool.Register()
-
-# tool.crabDir = "crab_TnPTreeJPsi_v20190211_17Sep2018_Charmonium_Run2018Cv1_GoldenJSON"
-# tool.treeName = "TnPTreeJPsi_17Sep2018_Charmonium_Run2018Cv1_GoldenJSON.root"
-# tool.eosPath = "/eos/cms/store/group/phys_muon/TagAndProbe/Run2018/102X"
-# tool.Register()
-
-# tool.crabDir = "crab_TnPTreeJPsi_v20190211_Charmonium_Run2018Dv2_GoldenJSON"
-# tool.treeName = "TnPTreeJPsi_Charmonium_Run2018Dv2_GoldenJSON.root"
-# tool.eosPath = "/eos/cms/store/group/phys_muon/TagAndProbe/Run2018/102X"
-# tool.Register()
-
+tool.crabDir = "crab_TnPTreeZ_v20190509_100LumiPerJob_07Aug17_SingleMuon_Run2016H_GoldenJSON"
+tool.treeName = "TnPTreeZ_07Aug17_SingleMuon_Run2016H_GoldenJSON_Incomplete_20190513.root"
+tool.eosPath = "None"
+tool.Register()
 
 tool.GenScript()
