@@ -27,7 +27,7 @@ config.Site.storageSite = 'T2_KR_KNU'
 
 config.Data.lumiMask = '/afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions16/13TeV/ReReco/Final/Cert_271036-284044_13TeV_23Sep2016ReReco_Collisions16_JSON.txt'
 
-version = '_v20190513_ignoreLocality_'
+version = '_v20190514_ignoreLocality_'
 # 'MultiCRAB' part
 if __name__ == '__main__':
     
@@ -41,24 +41,27 @@ if __name__ == '__main__':
     # config.Data.inputDataset = '/SingleMuon/Run2016C-07Aug17-v1/AOD'
     # crabCommand('submit', config = config)
 
-    # config.General.requestName = 'TnPTreeZ'+version+'07Aug17_SingleMuon_Run2016D_GoldenJSON'
-    # config.Data.inputDataset = '/SingleMuon/Run2016D-07Aug17-v1/AOD'
-    # crabCommand('submit', config = config)
+    config.General.requestName = 'TnPTreeZ'+version+'07Aug17_SingleMuon_Run2016D_GoldenJSON'
+    config.Data.inputDataset = '/SingleMuon/Run2016D-07Aug17-v1/AOD'
+    config.Site.whitelist = ['T2_UK_*', 'T3_UK_*', 'T2_IT_*', 'T3_IT_*', 'T2_BE_*', 'T3_BE_*', 'T2_FR_*', 'T3_FR_*'] # -- mandatory for ignoreLocality option
+    crabCommand('submit', config = config)
 
     # config.General.requestName = 'TnPTreeZ'+version+'07Aug17_SingleMuon_Run2016E_GoldenJSON'
     # config.Data.inputDataset = '/SingleMuon/Run2016E-07Aug17-v1/AOD'
     # crabCommand('submit', config = config)
 
-    # config.General.requestName = 'TnPTreeZ'+version+'07Aug17_SingleMuon_Run2016F_GoldenJSON'
-    # config.Data.inputDataset = '/SingleMuon/Run2016F-07Aug17-v1/AOD'
-    # crabCommand('submit', config = config)
+    config.General.requestName = 'TnPTreeZ'+version+'07Aug17_SingleMuon_Run2016F_GoldenJSON'
+    config.Data.inputDataset = '/SingleMuon/Run2016F-07Aug17-v1/AOD'
+    config.Site.whitelist = ['T2_UK_*', 'T3_UK_*', 'T2_IT_*', 'T3_IT_*', 'T2_BE_*', 'T3_BE_*', 'T2_FR_*', 'T3_FR_*'] # -- mandatory for ignoreLocality option
+    crabCommand('submit', config = config)
 
-    # config.General.requestName = 'TnPTreeZ'+version+'07Aug17_SingleMuon_Run2016G_GoldenJSON'
-    # config.Data.inputDataset = '/SingleMuon/Run2016G-07Aug17-v1/AOD'
-    # crabCommand('submit', config = config)
+    config.General.requestName = 'TnPTreeZ'+version+'07Aug17_SingleMuon_Run2016G_GoldenJSON'
+    config.Data.inputDataset = '/SingleMuon/Run2016G-07Aug17-v1/AOD'
+    config.Site.whitelist = ['T2_UK_*', 'T3_UK_*', 'T2_IT_*', 'T3_IT_*', 'T2_BE_*', 'T3_BE_*', 'T2_FR_*', 'T3_FR_*'] # -- mandatory for ignoreLocality option
+    crabCommand('submit', config = config)
 
     # -- lcoation: T1_UK_RAL_Disk
-    config.General.requestName = 'TnPTreeZ'+version+'07Aug17_SingleMuon_Run2016H_GoldenJSON'
-    config.Data.inputDataset = '/SingleMuon/Run2016H-07Aug17-v1/AOD'
-    config.Site.whitelist = ['T1_UK_*', 'T2_UK_*', 'T3_UK_*', 'T2_IT_*', 'T3_IT_*'] # -- mandatory for ignoreLocality option
-    crabCommand('submit', config = config)
+    # config.General.requestName = 'TnPTreeZ'+version+'07Aug17_SingleMuon_Run2016H_GoldenJSON'
+    # config.Data.inputDataset = '/SingleMuon/Run2016H-07Aug17-v1/AOD'
+    # config.Site.whitelist = ['T1_UK_*', 'T2_UK_*', 'T3_UK_*', 'T2_IT_*', 'T3_IT_*'] # -- mandatory for ignoreLocality option
+    # crabCommand('submit', config = config)
