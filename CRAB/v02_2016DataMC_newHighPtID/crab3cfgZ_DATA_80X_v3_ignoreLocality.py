@@ -43,7 +43,7 @@ if __name__ == '__main__':
 
     config.General.requestName = 'TnPTreeZ'+version+'07Aug17_SingleMuon_Run2016D_GoldenJSON'
     config.Data.inputDataset = '/SingleMuon/Run2016D-07Aug17-v1/AOD'
-    config.Site.whitelist = ['T2_UK_*', 'T3_UK_*', 'T2_IT_*', 'T3_IT_*', 'T2_BE_*', 'T3_BE_*', 'T2_FR_*', 'T3_FR_*'] # -- mandatory for ignoreLocality option
+    config.Site.whitelist = ['T2_UK_*', 'T3_UK_*', 'T2_IT_*', 'T3_IT_*', 'T2_BE_*', 'T2_DE_*', 'T2_FR_*', 'T3_FR_*'] # -- mandatory for ignoreLocality option
     crabCommand('submit', config = config)
 
     # config.General.requestName = 'TnPTreeZ'+version+'07Aug17_SingleMuon_Run2016E_GoldenJSON'
@@ -52,12 +52,12 @@ if __name__ == '__main__':
 
     config.General.requestName = 'TnPTreeZ'+version+'07Aug17_SingleMuon_Run2016F_GoldenJSON'
     config.Data.inputDataset = '/SingleMuon/Run2016F-07Aug17-v1/AOD'
-    config.Site.whitelist = ['T2_UK_*', 'T3_UK_*', 'T2_IT_*', 'T3_IT_*', 'T2_BE_*', 'T3_BE_*', 'T2_FR_*', 'T3_FR_*'] # -- mandatory for ignoreLocality option
+    config.Site.whitelist = ['T2_UK_*', 'T3_UK_*', 'T2_IT_*', 'T3_IT_*', 'T2_BE_*', 'T2_DE_*', 'T2_FR_*', 'T3_FR_*'] # -- mandatory for ignoreLocality option
     crabCommand('submit', config = config)
 
     config.General.requestName = 'TnPTreeZ'+version+'07Aug17_SingleMuon_Run2016G_GoldenJSON'
     config.Data.inputDataset = '/SingleMuon/Run2016G-07Aug17-v1/AOD'
-    config.Site.whitelist = ['T2_UK_*', 'T3_UK_*', 'T2_IT_*', 'T3_IT_*', 'T2_BE_*', 'T3_BE_*', 'T2_FR_*', 'T3_FR_*'] # -- mandatory for ignoreLocality option
+    config.Site.whitelist = ['T2_UK_*', 'T3_UK_*', 'T2_IT_*', 'T3_IT_*', 'T2_BE_*', 'T2_DE_*', 'T2_FR_*', 'T3_FR_*'] # -- mandatory for ignoreLocality option
     crabCommand('submit', config = config)
 
     # -- lcoation: T1_UK_RAL_Disk
