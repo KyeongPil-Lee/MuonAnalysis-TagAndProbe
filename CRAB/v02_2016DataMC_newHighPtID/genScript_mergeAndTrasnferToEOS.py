@@ -18,7 +18,7 @@ tool.xrdProtocol = "root://eoscms.cern.ch"
 # -- SingleMuon tree
 tool.SEPath = "/pnfs/knu.ac.kr/data/cms/store/user/kplee/SingleMuon"
 
-tool.crabDir = "crab_TnPTreeZ_v20190504_07Aug17_SingleMuon_Run2016Bver2_GoldenJSON"
+# tool.crabDir = "crab_TnPTreeZ_v20190504_07Aug17_SingleMuon_Run2016Bver2_GoldenJSON"
 # tool.treeName = "TnPTreeZ_07Aug17_SingleMuon_Run2016Bver2_GoldenJSON.root"
 # tool.eosPath = "None"
 # tool.Register()
