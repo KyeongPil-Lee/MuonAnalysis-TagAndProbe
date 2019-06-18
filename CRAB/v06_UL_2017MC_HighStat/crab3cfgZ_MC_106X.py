@@ -33,7 +33,7 @@ if __name__ == '__main__':
 
     config.General.requestName = 'TnPTreeZ'+version+'1060For2018_RelValZMM'
     config.Data.inputDataset = '/RelValZMM_13UP17/CMSSW_10_6_0-PUpmx25ns_106X_mc2017_realistic_v3_ulhlt17hs_pmx-v1/FEVTDEBUGHLT'
-    config.JobType.psetName = '../../test/zmumu/asdf.py'
+    config.JobType.psetName = '../../test/zmumu/tp_from_aod_MC_106X_mc2017_realistic_v3.py'
     # config.Data.allowNonValidInputDataset = True # -- current status = Production
     crabCommand('submit', config = config)
 
