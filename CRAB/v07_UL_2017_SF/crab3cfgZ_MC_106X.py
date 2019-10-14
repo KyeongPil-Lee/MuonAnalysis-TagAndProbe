@@ -33,7 +33,7 @@ if __name__ == '__main__':
 
     config.General.requestName = 'TnPTreeZ'+version+'UL2017_DYJetsToMuMu_M50_MadgraphMLM'
     config.Data.inputDataset = '/DYJetsToMuMu_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer19UL17RECO-PUForMUOVal_106X_mc2017_realistic_v6_ext1-v2/AODSIM'
-    config.JobType.psetName = '../../test/zmumu/tp_from_aod_MC_106X_mc2017_realistic_v3.py'
+    config.JobType.psetName = '../../test/zmumu/tp_from_aod_MC_106X_mc2017_realistic_v6.py'
     # config.Data.allowNonValidInputDataset = True # -- current status = Production
     crabCommand('submit', config = config)
 
