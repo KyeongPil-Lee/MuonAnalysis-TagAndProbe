@@ -12,7 +12,7 @@ process.MessageLogger.cerr.FwkReport.reportEvery = 10
 process.source = cms.Source("PoolSource", 
     fileNames = cms.untracked.vstring(),
 )
-#process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(500) )
+process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(500) )
 
 process.load('Configuration.StandardSequences.GeometryRecoDB_cff')
 process.load('Configuration.StandardSequences.MagneticField_cff')
@@ -105,8 +105,8 @@ elif "CMSSW_10_2_" in os.environ['CMSSW_VERSION']:
 elif "CMSSW_10_6_" in os.environ['CMSSW_VERSION']:
     process.GlobalTag.globaltag = cms.string('106X_dataRun2_v20')
     process.source.fileNames = [
-        '/store/data/Run2017F/SingleMuon/AOD/09Aug2019_UL2017-v1/2810000/0E62F315-6B1B-5E42-834E-280FA040D831.root',
-        '/store/data/Run2017F/SingleMuon/AOD/09Aug2019_UL2017-v1/2710000/30DD9706-DBC8-C84C-8386-DFBE727C4702.root',
+        '/store/data/Run2017E/SingleMuon/AOD/09Aug2019_UL2017-v1/260003/7417C8DE-DCB6-C947-9B0D-99D8B1EA4A49.root',
+        '/store/data/Run2017E/SingleMuon/AOD/09Aug2019_UL2017-v1/260002/9FB50FD9-4F68-574E-A215-8223243E544C.root',
         ]
 
 else: raise RuntimeError, "Unknown CMSSW version %s" % os.environ['CMSSW_VERSION']
