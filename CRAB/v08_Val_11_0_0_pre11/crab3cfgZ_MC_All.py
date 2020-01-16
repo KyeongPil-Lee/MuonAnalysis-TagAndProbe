@@ -31,10 +31,10 @@ if __name__ == '__main__':
     
     from CRABAPI.RawCommand import crabCommand
 
-    config.General.requestName = 'TnPTreeZ'+version+'RelValZMM_14_106X'
-    config.Data.inputDataset = '/RelValZMM_14/CMSSW_10_6_1_patch1-PU_106X_mcRun3_2021_realistic_v3-v1/GEN-SIM-RECO'
-    config.JobType.psetName = '../../test/zmumu/tp_from_aod_MC_106X_mcRun3_2021_realistic_v3.py'
-    crabCommand('submit', config = config)
+    # config.General.requestName = 'TnPTreeZ'+version+'RelValZMM_14_106X'
+    # config.Data.inputDataset = '/RelValZMM_14/CMSSW_10_6_1_patch1-PU_106X_mcRun3_2021_realistic_v3-v1/GEN-SIM-RECO'
+    # config.JobType.psetName = '../../test/zmumu/tp_from_aod_MC_106X_mcRun3_2021_realistic_v3.py'
+    # crabCommand('submit', config = config)
 
     config.General.requestName = 'TnPTreeZ'+version+'RelValZMM_14_110X_pre11'
     config.Data.inputDataset = '/RelValZMM_14/CMSSW_11_0_0_pre11-PU_110X_mcRun3_2021_realistic_v5-v1/GEN-SIM-RECO'
