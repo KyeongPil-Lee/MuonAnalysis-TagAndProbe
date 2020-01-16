@@ -49,11 +49,12 @@ elif "CMSSW_10_2_" in os.environ['CMSSW_VERSION']:
 elif "CMSSW_10_6_" in os.environ['CMSSW_VERSION']:
     process.GlobalTag.globaltag = cms.string('106X_mcRun3_2021_realistic_v3')
     process.source.fileNames = [
-    ] 
+    ]
 elif "CMSSW_11_0_" in os.environ['CMSSW_VERSION']:
-    process.GlobalTag.globaltag = cms.string('106X_mcRun3_2021_realistic_v3')
+    process.GlobalTag.globaltag = cms.string('110X_mcRun3_2021_realistic_v6')
     process.source.fileNames = [
     ]
+
     
 
 else: raise RuntimeError, "Unknown CMSSW version %s" % os.environ['CMSSW_VERSION']
