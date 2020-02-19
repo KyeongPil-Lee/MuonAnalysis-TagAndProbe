@@ -33,6 +33,7 @@ if __name__ == '__main__':
 
     config.General.requestName = 'TnPTreeZ'+version+'RelValZMM_13UP16_UL16_HighStat'
     config.Data.inputDataset = '/RelValZMM_13UP16/CMSSW_10_6_8-PU25ns_106X_mcRun2_asymptotic_preVFP_v5_UL16hltval_preVFP_v5-v1/AODSIM'
+    config.Data.allowNonValidInputDataset = True
     config.JobType.psetName = '../../test/zmumu/tp_from_aod_MC_arg.py'
     config.JobType.pyCfgParams = ['globalTag=106X_mcRun2_asymptotic_preVFP_v5']
     crabCommand('submit', config = config)
