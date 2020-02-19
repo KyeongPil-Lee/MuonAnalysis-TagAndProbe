@@ -1,5 +1,5 @@
 #########################################################
-#-- usage: cmsRun tp_from_aod_MC_arg.py <global tag> -- #
+#-- usage: cmsRun tp_from_aod_MC_arg.py globalTag=<global tag> inputFile=<inputFile> -- #
 #########################################################
 
 import FWCore.ParameterSet.Config as cms
@@ -23,57 +23,30 @@ process.load('Configuration.StandardSequences.MagneticField_38T_cff')
 process.load('Configuration.StandardSequences.FrontierConditions_GlobalTag_condDBv2_cff')
 process.load("Configuration.StandardSequences.Reconstruction_cff")
 
-import sys
-if len(sys.argv) < 2:
-    print "usage: cmsRun tp_from_aod_MC_arg.py <global tag>"
-    sys.exit()
+from FWCore.ParameterSet.VarParsing import VarParsing
+options = VarParsing('analysis')
 
-theGlobalTag = sys.argv[1] # -- take
-print "input global tag = ", theGlobalTag
+options.register('globalTag',
+                  "/store/mc/RunIIAutumn18DRPremix/DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/AODSIM/102X_upgrade2018_realistic_v15-v1/100000/73EF8C73-4852-D044-867F-4CFA1F920AEE.root", # default value
+                  VarParsing.multiplicity.singleton, # singleton or list
+                  VarParsing.varType.string,         # string, int, or float
+                  "input EDM file location (AOD)")
 
-process.GlobalTag.globaltag = cms.string(theGlobalTag)
-process.source.fileNames = []
+options.register('inputFile',
+                  "none", # default value
+                  VarParsing.multiplicity.singleton, # singleton or list
+                  VarParsing.varType.string,         # string, int, or float
+                  "Global tag used for the ntuple production")
 
-import os
-# if "CMSSW_8_0_" in os.environ['CMSSW_VERSION']:
-#     process.GlobalTag.globaltag = cms.string('80X_mcRun2_asymptotic_v14')
-#     process.source.fileNames = [
-#         '/store/mc/RunIISpring16reHLT80/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/40001/3459A4AB-D85C-E611-81F5-02163E011488.root',
-#         '/store/mc/RunIISpring16reHLT80/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/40001/8AB9296A-C55C-E611-9291-02163E012E69.root',
-#         '/store/mc/RunIISpring16reHLT80/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/40001/9A8A076A-C55C-E611-BE5A-02163E012E69.root',
-#         '/store/mc/RunIISpring16reHLT80/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/40002/4AC3D851-C45C-E611-8BFD-02163E012E69.root',
-#         '/store/mc/RunIISpring16reHLT80/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/40003/ACAA69A9-D85C-E611-983F-02163E011488.root',
-#     ]
-# elif "CMSSW_9_2_" in os.environ['CMSSW_VERSION']:
-#     process.GlobalTag.globaltag = cms.string('91X_mcRun2_asymptotic_v3')
-#     process.source.fileNames = [
-#         '/store/relval/CMSSW_9_2_0/RelValZMM_13/GEN-SIM-RECO/PU25ns_91X_mcRun2_asymptotic_v3-v1/10000/0471AF1A-F53C-E711-A012-0CC47A7C345E.root'
-#     ] 
-# elif "CMSSW_9_4_" in os.environ['CMSSW_VERSION']:
-#     process.GlobalTag.globaltag = cms.string('91X_mcRun2_asymptotic_v3')
-#     process.source.fileNames = [
-#         '/store/mc/RunIIFall17DRPremix/DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/AODSIM/RECOSIMstep_94X_mc2017_realistic_v10-v1/00000/0019074F-6EF2-E711-B6CD-008CFAC94118.root'
-#         #'/store/relval/CMSSW_9_4_0/RelValZMM_13/GEN-SIM-RECO/PU25ns_94X_mc2017_realistic_v10-v1/10000/2EA4F2FE-7DCA-E711-8BF9-0CC47A7C3638.root'
-#         #'/store/relval/CMSSW_9_4_0_pre3/RelValZMM_13/MINIAODSIM/PU25ns_94X_mc2017_realistic_PixFailScenario_IDEAL_HS_AVE50-v1/10000/5228FC24-10C5-E711-9B90-E0071B73B6C0.root'
-#     ] 
-# elif "CMSSW_10_2_" in os.environ['CMSSW_VERSION']:
-#     process.GlobalTag.globaltag = cms.string('102X_upgrade2018_realistic_v15')
-#     process.source.fileNames = [
-#         '/store/mc/RunIIAutumn18DRPremix/DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/AODSIM/102X_upgrade2018_realistic_v15-v1/100000/73EF8C73-4852-D044-867F-4CFA1F920AEE.root'
-#     ]
-# elif "CMSSW_10_6_" in os.environ['CMSSW_VERSION']:
-#     process.GlobalTag.globaltag = cms.string('106X_mcRun3_2021_realistic_v3')
-#     process.source.fileNames = [
-#     ]
-# elif "CMSSW_11_0_" in os.environ['CMSSW_VERSION']:
-#     process.GlobalTag.globaltag = cms.string('110X_mcRun3_2021_realistic_v6')
-#     process.source.fileNames = [
-#     ]
+options.parseArguments()
+
+print "input global tag = ", options.globalTag
+print "input file       = ", options.inputFile
+
+process.GlobalTag.globaltag = cms.string(options.globalTag)
+process.source.fileNames = [options.inputFile]
 
     
-
-# else: raise RuntimeError, "Unknown CMSSW version %s" % os.environ['CMSSW_VERSION']
-
 ## SELECT WHAT DATASET YOU'RE RUNNING ON
 TRIGGER="SingleMu"
 #TRIGGER="Any"
@@ -679,7 +652,9 @@ process.RandomNumberGeneratorService.tkTracksNoZ0 = cms.PSet( initialSeed = cms.
 
 process.TFileService = cms.Service("TFileService", fileName = cms.string("tnpZ_MC.root"))
 
+
 # if True: # enable and do cmsRun tp_from_aod_MC.py /eos/path/to/run/on [ extra_postfix ] to run on all files in that eos path 
+#     import os
 #     import sys
 #     args = sys.argv[1:]
 #     if (sys.argv[0] == "cmsRun"): args = sys.argv[2:]
