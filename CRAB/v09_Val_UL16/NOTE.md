@@ -86,6 +86,7 @@ CRAB directory
 cd /afs/cern.ch/user/k/kplee/work/private/MuonPOGTnP/CMSSW_slc7/CMSSW_10_6_8/src/MuonAnalysis/TagAndProbe/CRAB/v09_Val_UL16/CRABDir
 crab status crab_TnPTreeZ_v20200219_RelValZMM_13UP16_UL16_HighStat_v2
 crab status crab_TnPTreeZ_v20200219_RelValZMM_13UP16_UL16_HighStat_WrongL1_v2
+crab status crab_TnPTreeZ_v20200221_RelValZMM_13UP16_UL16_HighStat_postFVP
 ```
 
-* ```config.Data.allowNonValidInputDataset = True``` is used (19th Feb. 2020)
+* ```config.Data.allowNonValidInputDataset = True``` is used for preFVP (19th Feb. 2020)
