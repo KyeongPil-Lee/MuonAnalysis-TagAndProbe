@@ -168,3 +168,41 @@ Setup is exactly same with 10_2_X case
   * It was ignored in the previous CMSSW and just fill the dummy numbers in the branch, but in CMSSW_10_6_X, it makes error
   * **All of them should be commented out**
     * Example: ```test/zmumu/tp_from_aod_MC_105X_mc2017_realistic_v7.py```
+
+
+
+### Recipe (11_0_0_patch1 or later)
+
+Setup is exactly same with 10_2_X case, except for one thing: add
+
+```
+patMuonsWithoutTrigger.addInverseBeta = cms.bool(False)
+```
+
+in ```MuonAnalysis/MuonAssociator/python/patMuonsWithTrigger_cff.py```
+
+* Without above fix, [PhysicsTools/PatAlgos/plugins/PATMuonProducer.cc](PhysicsTools/PatAlgos/plugins/PATMuonProducer.cc) makes error below:
+
+  ```
+  ----- Begin Fatal Exception 23-Mar-2020 06:02:49 CET-----------------------
+  An exception of category 'InvalidReference' occurred while
+     [0] Processing  Event run: 1 lumi: 232294 event: 38096058 stream: 0
+     [1] Running path 'tagAndProbe'
+     [2] Calling method for module PATMuonProducer/'patMuonsWithoutTrigger'
+  Exception Message:
+  ValueMap: no associated value for given product and index
+  ----- End Fatal Exception -------------------------------------------------
+  ```
+
+  which comes from the line L621:
+
+  ```
+        if (addInverseBeta_) {
+          aMuon.readTimeExtra((*muonsTimeExtra)[muonRef]);
+        }
+  ```
+
+  * "muonsTimeExtra" token is valid and correctly loaded in the code, but ```(*muonsTimeExtra)[muonRef]``` seems not work
+  * simInfo ([code](https://github.com/cms-sw/cmssw/blob/CMSSW_11_0_X/PhysicsTools/PatAlgos/plugins/PATMuonProducer.cc#L625-L641)) is also similar situation; the token is valid, but it makes error if it brings a value from the valueMap
+    * That's why ```bool simInfoIsAvailalbe = false``` is put by hand (it is not controllable at the python configuration level)
+
