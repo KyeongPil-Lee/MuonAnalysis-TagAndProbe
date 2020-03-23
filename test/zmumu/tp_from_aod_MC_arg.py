@@ -30,13 +30,13 @@ options.register('globalTag',
                   "/store/mc/RunIIAutumn18DRPremix/DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/AODSIM/102X_upgrade2018_realistic_v15-v1/100000/73EF8C73-4852-D044-867F-4CFA1F920AEE.root", # default value
                   VarParsing.multiplicity.singleton, # singleton or list
                   VarParsing.varType.string,         # string, int, or float
-                  "input EDM file location (AOD)")
+                  "Global tag used for the ntuple production")
 
 options.register('inputFile',
                   "none", # default value
                   VarParsing.multiplicity.singleton, # singleton or list
                   VarParsing.varType.string,         # string, int, or float
-                  "Global tag used for the ntuple production")
+                  "input EDM file location (AOD)")
 
 options.parseArguments()
 
