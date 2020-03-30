@@ -31,14 +31,14 @@ if __name__ == '__main__':
     
     from CRABAPI.RawCommand import crabCommand
 
-    config.General.requestName = 'TnPTreeZ'+version+'RelValZMM_13UP16_UL16_HighStat_L1Fix_postFVP'
-    config.Data.inputDataset = '/RelValZMM_13UP16/CMSSW_10_6_11_CANDIDATE3-PU25ns_106X_mcRun2_asymptotic_v12_hltul16_post-v1/AODSIM'
-    config.Data.allowNonValidInputDataset = True
-    config.JobType.psetName = '../../test/zmumu/tp_from_aod_MC_arg.py'
-    config.JobType.pyCfgParams = ['globalTag=106X_mcRun2_asymptotic_v12']
-    crabCommand('submit', config = config)
+    # config.General.requestName = 'TnPTreeZ'+version+'RelValZMM_13UP16_UL16_HighStat_L1Fix_postFVP'
+    # config.Data.inputDataset = '/RelValZMM_13UP16/CMSSW_10_6_11_CANDIDATE3-PU25ns_106X_mcRun2_asymptotic_v12_hltul16_post-v1/AODSIM'
+    # config.Data.allowNonValidInputDataset = True
+    # config.JobType.psetName = '../../test/zmumu/tp_from_aod_MC_arg.py'
+    # config.JobType.pyCfgParams = ['globalTag=106X_mcRun2_asymptotic_v12']
+    # crabCommand('submit', config = config)
 
-    config.General.requestName = 'TnPTreeZ'+version+'RelValZMM_13UP16_UL16_HighStat_L1Fix_preFVP_'
+    config.General.requestName = 'TnPTreeZ'+version+'RelValZMM_13UP16_UL16_HighStat_L1Fix_preFVP'
     config.Data.inputDataset = '/RelValZMM_13UP16/CMSSW_10_6_11_CANDIDATE3-PU25ns_106X_mcRun2_asymptotic_preVFP_v6_hltul16_pre-v1/AODSIM'
     config.Data.allowNonValidInputDataset = True
     config.JobType.psetName = '../../test/zmumu/tp_from_aod_MC_arg.py'
