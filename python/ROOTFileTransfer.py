@@ -69,7 +69,9 @@ class TransferTool:
             self.mkdir_p(outputPath)
 
         list_outputFile = self.GetListOfOutputFiles(inputPath)
-        print "list_outputFile = ", list_outputFile
+        print "list_outputFile: "
+        for outputFlie in list_outputFile:
+            print outputFile
 
         if self.do_hadd:
             mergedFilePath = self.MergeROOTFiles(inputPath, list_outputFile)
@@ -97,6 +99,7 @@ class TransferTool:
                 if ".root" == os.path.splitext(fileName)[-1] and "failed" not in path:
                     list_outputFile.append( "%s/%s" % (path, fileName) )
 
+        list_outputFile.sort()
         return list_outputFile
 
     def MergeROOTFiles(self, inputPath, list_file):
