@@ -27,26 +27,25 @@ config.Data.lumiMask = '/afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Coll
 
 config.Data.allowNonValidInputDataset = True # -- RunD is under production
 
-version = '_v20200404_'
+version = '_v20200406_'
 # 'MultiCRAB' part
 if __name__ == '__main__':
     
     from CRABAPI.RawCommand import crabCommand
 
-    config.General.requestName = 'TnPTreeZ'+version+'12Nov2019_SingleMuon_Run2018A_GoldenJSON'
-    config.Data.inputDataset = '/SingleMuon/Run2018A-12Nov2019_UL2018-v2/AOD'
-    config.JobType.psetName = '../../test/zmumu/tp_from_aod_Data_arg.py'
-    config.JobType.pyCfgParams = ['globalTag=106X_dataRun2_v24']
-    config.Data.lumiMask = './notFinishedLumis_RunA.json'
-    crabCommand('submit', config = config)
+    # config.General.requestName = 'TnPTreeZ'+version+'12Nov2019_SingleMuon_Run2018A_GoldenJSON'
+    # config.Data.inputDataset = '/SingleMuon/Run2018A-12Nov2019_UL2018-v2/AOD'
+    # config.JobType.psetName = '../../test/zmumu/tp_from_aod_Data_arg.py'
+    # config.JobType.pyCfgParams = ['globalTag=106X_dataRun2_v24']
+    # config.Data.lumiMask = './notFinishedLumis_RunA.json'
+    # crabCommand('submit', config = config)
 
-    config.General.requestName = 'TnPTreeZ'+version+'12Nov2019_SingleMuon_Run2018B_GoldenJSON'
-    config.Data.inputDataset = '/SingleMuon/Run2018B-12Nov2019_UL2018-v2/AOD'
-    config.JobType.psetName = '../../test/zmumu/tp_from_aod_Data_arg.py'
-    config.JobType.pyCfgParams = ['globalTag=106X_dataRun2_v24']
-    config.Data.lumiMask = './notFinishedLumis_RunB.json'
-
-    crabCommand('submit', config = config)
+    # config.General.requestName = 'TnPTreeZ'+version+'12Nov2019_SingleMuon_Run2018B_GoldenJSON'
+    # config.Data.inputDataset = '/SingleMuon/Run2018B-12Nov2019_UL2018-v2/AOD'
+    # config.JobType.psetName = '../../test/zmumu/tp_from_aod_Data_arg.py'
+    # config.JobType.pyCfgParams = ['globalTag=106X_dataRun2_v24']
+    # config.Data.lumiMask = './notFinishedLumis_RunB.json'
+    # crabCommand('submit', config = config)
 
     # config.General.requestName = 'TnPTreeZ'+version+'12Nov2019_SingleMuon_Run2018C_GoldenJSON'
     # config.Data.inputDataset = '/SingleMuon/Run2018C-12Nov2019_UL2018-v2/AOD'
@@ -55,9 +54,10 @@ if __name__ == '__main__':
     # crabCommand('submit', config = config)
 
 
-    # config.General.requestName = 'TnPTreeZ'+version+'12Nov2019_SingleMuon_Run2018D_GoldenJSON'
-    # config.Data.inputDataset = '/SingleMuon/Run2018D-12Nov2019_UL2018-v4/AOD'
-    # config.JobType.psetName = '../../test/zmumu/tp_from_aod_Data_arg.py'
-    # config.JobType.pyCfgParams = ['globalTag=106X_dataRun2_v24']
-    # crabCommand('submit', config = config)
+    config.General.requestName = 'TnPTreeZ'+version+'12Nov2019_SingleMuon_Run2018D_GoldenJSON'
+    config.Data.inputDataset = '/SingleMuon/Run2018D-12Nov2019_UL2018-v4/AOD'
+    config.JobType.psetName = '../../test/zmumu/tp_from_aod_Data_arg.py'
+    config.JobType.pyCfgParams = ['globalTag=106X_dataRun2_v24']
+    config.Data.lumiMask = './notFinishedLumis_RunD.json'
+    crabCommand('submit', config = config)
 
