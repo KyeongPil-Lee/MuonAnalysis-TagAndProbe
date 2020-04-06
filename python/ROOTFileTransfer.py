@@ -77,6 +77,8 @@ class TransferTool:
             mergedFilePath = self.MergeROOTFiles(inputPath, list_outputFile)
             list_outputFile = [mergedFilePath] # -- transfer merged file only
 
+        print "Start to transfer files to %s ..." % (outputPath)
+
         for outputFile in list_outputFile:
             fileName = outputFile.split("/")[-1]
             self.sftp.put(outputFile, outputPath+"/"+fileName)
