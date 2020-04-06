@@ -70,7 +70,7 @@ class TransferTool:
 
         list_outputFile = self.GetListOfOutputFiles(inputPath)
         print "list_outputFile: "
-        for outputFlie in list_outputFile:
+        for outputFile in list_outputFile:
             print outputFile
 
         if self.do_hadd:
