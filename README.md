@@ -22,7 +22,7 @@ git cms-addpkg PhysicsTools/PatAlgos
 vi PhysicsTools/PatAlgos/plugins/PATMuonProducer.cc
 # -- change the line:
 # -- bool simInfoIsAvailalbe = iEvent.getByToken(simInfo_,simInfo); ->
-# -- simInfoIsAvailalbe=false;
+# -- bool simInfoIsAvailalbe=false;
 
 git cms-addpkg MuonAnalysis/MuonAssociators
 
@@ -168,6 +168,25 @@ Setup is exactly same with 10_2_X case
   * It was ignored in the previous CMSSW and just fill the dummy numbers in the branch, but in CMSSW_10_6_X, it makes error
   * **All of them should be commented out**
     * Example: ```test/zmumu/tp_from_aod_MC_105X_mc2017_realistic_v7.py```
+
+
+
+### For UL2016 production under CMSSW_10_6_X
+
+1. ```MuonAnalysis/MuonAssociators/python/patMuonsWithTrigger_cff.py``` only recognize ```hltIterL3MuonCandidates``` which used in 2017 and 2018 data
+   -> It should be updated to recognize 2016 version of L3 candidate (```hltL3MuonCandidates```)
+
+```
+vi MuonAnalysis/MuonAssociators/python/patMuonsWithTrigger_cff.py
+# -- replace all hltIterL3MuonCandidates with hltL3MuonCandidates
+```
+
+
+
+2. Also, ```tnp_aod_Data_arg.py``` requires ```"!triggerObjectMatchesByCollection('hltIterL3MuonCandidates').empty()"``` for tag muons: it should be updated to:
+   ```"!triggerObjectMatchesByCollection('hltL3MuonCandidates').empty()"```
+
+(the config for MC sample doesn't have this line: it doesn't need to be updated)
 
 
 
