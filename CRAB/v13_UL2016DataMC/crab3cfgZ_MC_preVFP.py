@@ -26,7 +26,7 @@ config.Site.storageSite = 'T2_KR_KNU'
 # LastRun = 284044
 # config.Data.runRange = '%d-%d' % (FirstRun, LastRun)
 
-# config.Data.allowNonValidInputDataset = True
+config.Data.allowNonValidInputDataset = True
 
 version = '_v20200709_'
 # 'MultiCRAB' part
